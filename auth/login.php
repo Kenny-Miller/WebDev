@@ -1,8 +1,8 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'].'/shared/head.php'); ?>
 <?php require_once($_SERVER['DOCUMENT_ROOT'].'/shared/header.php'); ?>
-    <form method="post" action="/users/dashboard.php">
-        <input type="text" value="username">
-        <input type="password" value="password">
-        <input type="submit" value="Login">
+    <form method="POST" action="/users/dashboard.php">
+        <div><input type="text" id="username" value="username"></div>
+        <div><input type="password" id="password" value="password"></div>
+        <div><input type="submit" value="Login"></div>
     </form>
 <?php require_once($_SERVER['DOCUMENT_ROOT'].'/shared/footer.php'); ?>
