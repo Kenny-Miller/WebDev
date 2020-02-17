@@ -1,1 +1,1 @@
-<?php header("Location: /auth/login.php", TRUE, 302) ?>
+<?php header("Location: /auth/login.php", TRUE, 302); exit(); ?>
