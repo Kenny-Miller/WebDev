@@ -1,0 +1,12 @@
+body.login {
+    background: #EEEEEE;
+}
+
+div.login {
+    text-align: center;
+    padding: 30px 0px;
+    border-radius: 15px;
+    border-color: #000000;
+    border-width: 1px;
+}
+
