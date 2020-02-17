@@ -10,6 +10,8 @@ header {
 footer {
     background: #000000;
     color: #ffffff;
+    text-align:center;
+    padding: 9px;
 }
 
 body.login {
@@ -23,6 +25,7 @@ div.login {
 }
 
 form.login {
+    height:80%;
     background-color: white;
     border-radius: 15px;
     box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
