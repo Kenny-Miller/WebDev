@@ -1,2 +1,4 @@
-    <div> Footer</div>
+<footer>
+    <div> Welcome</div>
+</footer>
 </html>
