@@ -17,6 +17,9 @@ body.login {
 
 div.login {
     text-align: center;
+}
+
+form.login {
     padding: 30px 0px;
     border-radius: 15px;
     border-color: #000000;
