@@ -1,1 +1,1 @@
-<?php header("Location: fronzen-ravine-43740.herokuappl.com/auth/login.php", TRUE, 302) ?>
+<?php header("Location: /login.php", TRUE, 302) ?>
