@@ -1,3 +1,12 @@
+header {
+    background: #ffffff;
+}
+
+footer {
+    background: #000000;
+    color: #ffffff;
+}
+
 body.login {
     background: #EEEEEE;
 }
