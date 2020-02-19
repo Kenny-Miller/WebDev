@@ -77,7 +77,6 @@ footer {
 .dashboard-content, .users-content, .settings-content, .admin-content{
     margin-top:25px;
     margin-left:25%;
-    width:90%;
     text-align:center;
 }
 
