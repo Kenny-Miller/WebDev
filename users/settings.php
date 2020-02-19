@@ -27,7 +27,7 @@
         </div>
         <div class="settings-content">
             <div class="user-tile-title">
-                <h2>Users</h2>
+                <h2>Settings</h2>
                 <ul class="user-tile-list">
                     <li class="user-tile-item">
                         <h3>Dark Mode</h3>

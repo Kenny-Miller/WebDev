@@ -27,7 +27,7 @@
         </div>
         <div class="admin-content">
             <div class="user-tile-title">
-                <h2>Users</h2>
+                <h2>Admin Dashboard</h2>
                 <ul class="user-tile-list">
                     <li class="user-tile-item">
                         <h3>Add User</h3>
