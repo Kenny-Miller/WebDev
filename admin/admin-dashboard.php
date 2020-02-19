@@ -25,7 +25,20 @@
                 <img class="sidebar-image-arrow" src="/styles/images/arrow.png">
             </a>
         </div>
-        <div class="dashboard-content">
-            
+        <div class="admin-content">
+            <div class="user-tile-title">
+                <h2>Users</h2>
+                <ul class="user-tile-list">
+                    <li class="user-tile-item">
+                        <h3>Add User</h3>
+                    </li>
+                    <li class="user-tile-item">
+                        <h3>Remove User</h3>
+                    </li>
+                    <li class="user-tile-item">
+                        <h3>Delete All Completed Tasks</h3>
+                    </li>
+                </ul>
+            </div>
         </div>
 <?php require_once($_SERVER['DOCUMENT_ROOT'].'/shared/footer.php'); ?>

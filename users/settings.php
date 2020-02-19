@@ -25,7 +25,17 @@
                 <img class="sidebar-image-arrow" src="/styles/images/arrow.png">
             </a>
         </div>
-        <div class="dashboard-content">
-            
+        <div class="settings-content">
+            <div class="user-tile-title">
+                <h2>Users</h2>
+                <ul class="user-tile-list">
+                    <li class="user-tile-item">
+                        <h3>Dark Mode</h3>
+                    </li>
+                    <li class="user-tile-item">
+                        <h3>Color Blind Mode</h3>
+                    </li>
+                </ul>
+            </div>
         </div>
 <?php require_once($_SERVER['DOCUMENT_ROOT'].'/shared/footer.php'); ?>
