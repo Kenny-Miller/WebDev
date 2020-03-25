@@ -11,12 +11,13 @@
     
     if ($dao->userExists($_POST['username'], $_POST['password'])) {
         $_SESSION['auth'] = true;
-        header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspace.html");
-        exit;
+        /*header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspace.html");
+        exit;*/
     } else {
         $_SESSION['auth'] = false;
         $_SESSION['message'] = "Invalid username or password";
-        header("Location: https://frozen-ravine-42740.herokuapp.com/pages/login.html");
-        exit;
+       /* header("Location: https://frozen-ravine-42740.herokuapp.com/pages/login.html");
+        exit;*/
     }
+    echo "{$result}";
 ?>
