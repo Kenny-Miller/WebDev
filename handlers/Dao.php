@@ -34,5 +34,22 @@ class Dao{
         }
     }
     
+    public function getWorkspaces($uid){
+        $conn = $this->getConnection();
+        if(is_null($conn)) {
+            return;
+        }
+        try{
+            $query = "Select * from workspaces where user_id = :id";
+            $execute = $conn->prepare($query);
+            $execute->bindParam(":id", $uid);
+            $execute->execute();
+            $result = $execute->fetch(PDO::FETCH_ASSOC);
+            return $result;
+        }  catch (\PDOException $e) {
+            throw new \PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+    
 }
 ?>

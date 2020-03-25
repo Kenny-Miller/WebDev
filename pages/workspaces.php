@@ -16,13 +16,20 @@
         <link rel="stylesheet" href="/resources/style.css" type="text/css"/>
     </head>
     <body>
-        <?php echo $_SESSION['uid']; ?>
         <div class="header">
             <img src="/resources/images/logo.png" alt="Logo">
         </div>
         <div class="workspace-content">
             <h1 class="heading">Your Workspaces</h1>
+            
             <ol id="workspace-list">
+                <?php
+                    $uid = $_SESSION['uid'];
+                    
+                    $workspaces = $dao->getWorkspaces($uid);
+                    echo print_r($workspaces, 1);
+                
+                ?>
                 <li class="workspace-item">
                     <a>
                         <p>Workspace Name</p>
@@ -31,7 +38,7 @@
                     </a>
                 </li>
                 <li class="workspace-item">
-                    <a>
+                    <a href="dashboard.html">
                         <p>Workspace Name</p>
                         <p>Unnassigned Incidents</p>
                         <p>Number of Users</p>
