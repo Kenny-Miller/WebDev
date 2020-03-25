@@ -25,10 +25,9 @@
         <div class="workspace-content">
             <h1 class="heading">Your Workspaces</h1>
             <?php 
-                    session_start();
                     if (isset($_SESSION["message"])) {
                         echo print_r($_SESSION);
-                        unset($_SESSION["messsage"]);
+                        unset($_SESSION[messsage]);
                         echo print_r($_SESSION);
                     }
                 ?>
