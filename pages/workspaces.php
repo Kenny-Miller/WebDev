@@ -23,7 +23,12 @@
         </div>
         <div class="workspace-content">
             <h1 class="heading">Your Workspaces</h1>
-            
+            <?php
+                    if (isset($_SESSION['message'])) {
+                        echo "<div id='error'>{$_SESSION['message']}</div>";
+                        unset($_SESSION['messsage']);
+                    }
+                ?>
             <ol id="workspace-list">
                 <?php
                     $uid = $_SESSION['uid'];
@@ -54,13 +59,6 @@
                             </li>";
                     }                
                 ?>
-                <li class="workspace-item">
-                    <a href="da">
-                        <p>Workspace Name</p>
-                        <p>Unnassigned Incidents</p>
-                        <p>Number of Users</p>
-                    </a>
-                </li>
             </ol>
         <div class="footer">@Copyright 2020 Kenny Miller</div>
         </div>
