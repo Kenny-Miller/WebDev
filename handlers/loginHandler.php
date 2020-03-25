@@ -9,7 +9,7 @@
     
     $result = $dao->userExists($_POST['username'], $_POST['password']);
    
-    echo "results: {$results}";
+    echo "results: {$result}";
     /*
     if (is_null($result) == false) {
         $_SESSION['auth'] = true;
