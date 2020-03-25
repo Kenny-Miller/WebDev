@@ -27,33 +27,17 @@
             <ol id="workspace-list">
                 <?php
                     $uid = $_SESSION['uid'];
-                    
                     $workspaces = $dao->getWorkspaces($uid);
+                
                     foreach ($workspaces as $workspace){
-                        echo print_r($workspace, 1);
+                        //echo print_r($workspace, 1);
+                        echo "<li class=\"workspace-item\">
+                                <a>
+                                    <p>{$workspace["workspace_name"]}</p>
+                                </a>
+                            </li>";
                     }                
                 ?>
-                <li class="workspace-item">
-                    <a>
-                        <p>Workspace Name</p>
-                        <p>Unnassigned Incidents</p>
-                        <p>Number of Users</p>
-                    </a>
-                </li>
-                <li class="workspace-item">
-                    <a href="dashboard.html">
-                        <p>Workspace Name</p>
-                        <p>Unnassigned Incidents</p>
-                        <p>Number of Users</p>
-                    </a>
-                </li>
-                <li class="workspace-item">
-                    <a>
-                        <p>Workspace Name</p>
-                        <p>Unnassigned Incidents</p>
-                        <p>Number of Users</p>
-                    </a>
-                </li>
                 <li class="workspace-item">
                     <a>
                         <p>Workspace Name</p>
