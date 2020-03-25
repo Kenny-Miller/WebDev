@@ -12,7 +12,7 @@
     if($results){
         $_SESSION['auth'] = true;
         $_SESSION['uid'] = $results['user_id'];
-        header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspace.html");
+        header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspaces.php");
         exit;
     } else{
         $_SESSION['auth'] = false;
