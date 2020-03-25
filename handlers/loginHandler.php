@@ -2,6 +2,8 @@
     require_once 'Dao.php';
 
     session_start();
+
+    echo "hi"
     
     $dao = new Dao();
     
