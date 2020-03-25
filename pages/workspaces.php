@@ -27,8 +27,9 @@
                     $uid = $_SESSION['uid'];
                     
                     $workspaces = $dao->getWorkspaces($uid);
-                    echo print_r($workspaces, 1);
-                
+                    foreach ($workspaces as $workspace){
+                        echo print_r($workspace, 1);
+                    }                
                 ?>
                 <li class="workspace-item">
                     <a>
