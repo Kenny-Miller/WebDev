@@ -32,14 +32,14 @@
                     foreach ($workspaces as $workspace){
                         //echo print_r($workspace, 1);
                         echo "<li class=\"workspace-item\">
-                                <a>
+                                <a href=\"dashboard.html?wk={$workspace["workspace_id"]}\">
                                     <p>{$workspace["workspace_name"]}</p>
                                 </a>
                             </li>";
                     }                
                 ?>
                 <li class="workspace-item">
-                    <a>
+                    <a href="da">
                         <p>Workspace Name</p>
                         <p>Unnassigned Incidents</p>
                         <p>Number of Users</p>
