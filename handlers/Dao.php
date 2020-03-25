@@ -24,9 +24,10 @@ class Dao{
         try{
             $query = "Select user_id from users where username = :user and password = :pwd";
             $execute = $conn->prepare($query);
-            $execute->bindParam(":user", 'aaaaa');
+            $execute->bindParam(":user", $user);
             $execute->bindParam(":pwd", $pwd);
-            return $execute->execute();
+            return "fuck"
+            /*return $execute->execute();*/
         }  catch (\PDOException $e) {
             throw new \PDOException($e->getMessage(), (int)$e->getCode());
         }
