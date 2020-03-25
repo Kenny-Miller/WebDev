@@ -25,7 +25,7 @@
             <h1 class="heading">Your Workspaces</h1>
             <?php
                     if (isset($_SESSION['message'])) {
-                        echo "<div id='error'>{$_SESSION['message']}</div>";
+                        echo print_r($_SESSION);
                         unset($_SESSION['messsage']);
                     }
                 ?>
