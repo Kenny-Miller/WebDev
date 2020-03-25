@@ -4,6 +4,8 @@
     private $username = 'b6e14923d349d5';
     private $password = 'e87e58a7';
         
+    public function __construct(){}
+    
     public function getConnection() {
         try {
             $connection = new PDO("mysql:host={$this->host};dbname={$this->dbname}", $this->username, $this->password);
