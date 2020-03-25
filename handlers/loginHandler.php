@@ -1,5 +1,5 @@
 <?php
-    require_once '../Dao.php';
+    require_once '/handlers/Dao.php';
 
     session_start();
     
