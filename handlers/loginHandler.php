@@ -8,6 +8,8 @@
     $dao = new Dao();
     
     $result = $dao->userExists($_POST['username'], $_POST['password']);
+    unset($_POST['username']);
+    unset($_POST['password']);
     
     if ($dao->userExists($_POST['username'], $_POST['password'])) {
         $_SESSION['auth'] = true;
