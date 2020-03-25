@@ -6,7 +6,7 @@
     exit;
   }
 
-  require_once 'Dao.php';
+  require_once dirname(__FILE__). '/../handlers/Dao.php';
   $dao = new Dao();
 ?>
 <html>
