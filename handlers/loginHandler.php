@@ -11,12 +11,13 @@
    
     if($results){
         $_SESSION['auth'] = true;
+        $_SESSION['uid'] = $results['user_id'];
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspace.html");
         exit;
     } else{
         $_SESSION['auth'] = false;
         $_SESSION['message'] = "Invalid username or password";
-        header("Location: https://frozen-ravine-42740.herokuapp.com/pages/login.html");
+        header("Location: https://frozen-ravine-42740.herokuapp.com/pages/login.php");
         exit;
     }
 ?>
