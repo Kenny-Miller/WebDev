@@ -49,7 +49,7 @@
                                 <a href=\"dashboard.html?wk={$workspace["workspace_id"]}\">
                                     <p>{$workspace["workspace_name"]}</p>
                                     <p>Unnassigned Incidents: {$numUsersCount} </p>
-                                    <p>Number of Users: {$numUI]} </p>
+                                    <p>Number of Users: {$numUI} </p>
                                 </a>
                             </li>";
                     }                
