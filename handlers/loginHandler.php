@@ -10,7 +10,7 @@
     $result = $dao->userExists($_POST['username'], $_POST['password']);
    
     
-    if (!is_null($result)) {
+    if (is_null($result) == false) {
         $_SESSION['auth'] = true;
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspace.html");
         exit;
