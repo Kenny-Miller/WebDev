@@ -26,7 +26,7 @@ class Dao{
             $execute = $conn->prepare($query);
             $execute->bindParam(":user", $user);
             $execute->bindParam(":pwd", $pwd);
-            return "fuck"
+            return "fuck";
             /*return $execute->execute();*/
         }  catch (\PDOException $e) {
             throw new \PDOException($e->getMessage(), (int)$e->getCode());
