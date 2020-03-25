@@ -7,6 +7,7 @@
 
     $results = $dao->userExists($_POST['username'], $_POST['password']);
    
+    unset($_SESSION['form']);
     if($results){
         $_SESSION['auth'] = true;
         $_SESSION['uid'] = $results['user_id'];
@@ -15,6 +16,7 @@
     } else{
         $_SESSION['auth'] = false;
         $_SESSION['message'] = "Invalid username or password";
+        $_SESSION['form'] = $_POST;
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/login.php");
         exit;
     }

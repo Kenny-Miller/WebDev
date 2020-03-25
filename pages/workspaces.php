@@ -25,12 +25,11 @@
         <div class="workspace-content">
             <h1 class="heading">Your Workspaces</h1>
             <?php 
-                    if (isset($_SESSION["message"])) {
-                        echo print_r($_SESSION);
-                        unset($_SESSION["message"]);
-                        echo print_r($_SESSION);
-                    }
-                ?>
+                if (isset($_SESSION["message"])) {
+                    echo print_r($_SESSION);
+                    unset($_SESSION["message"]);
+                }
+            ?>
             <ol id="workspace-list">
                 <?php
                     $uid = $_SESSION['uid'];
