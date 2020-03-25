@@ -7,21 +7,23 @@
     
     $dao = new Dao();
     
-    $result = $dao->userExists($_POST['username'], $_POST['password']);
-    unset($_POST['username']);
-    unset($_POST['password']);
-    
+    $result1 = $dao->userExists("test", "123");
+    $result2 = $dao->userExists("t", "1");
+   
+    /*
     if ($dao->userExists($_POST['username'], $_POST['password'])) {
         $_SESSION['auth'] = true;
         /*header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspace.html");
-        exit;*/
+        exit;
     } else {
         $_SESSION['auth'] = false;
         $_SESSION['message'] = "Invalid username or password";
-       /* header("Location: https://frozen-ravine-42740.herokuapp.com/pages/login.html");
-        exit;*/
-    }
+        header("Location: https://frozen-ravine-42740.herokuapp.com/pages/login.html");
+        exit;
+    } */
     echo "Username {$_POST['username']}";
     echo "Password {$_POST['password']}";
-    echo print_r($result, 1);
+    echo print_r($result1, 1);
+    echo "     gap    ";
+    echo print_r($result2, 1);
 ?>
