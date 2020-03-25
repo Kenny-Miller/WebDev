@@ -20,6 +20,6 @@
         exit;*/
     }
     echo "Username {$_POST['username']}";
-    echo "Password {$_POST['password']}"
+    echo "Password {$_POST['password']}";
     echo "{$result}";
 ?>
