@@ -35,13 +35,15 @@
                         $uI = $dao->getNumUI($workspace["workspace_id"]);
                         
                         echo $numUsers["count"];
-                        echo $uI["count"];
+                        echo $uI;
+                        echo print_r($uI);
+                        
                         //echo print_r($workspace, 1);
                         echo "<li class=\"workspace-item\">
                                 <a href=\"dashboard.html?wk={$workspace["workspace_id"]}\">
                                     <p>{$workspace["workspace_name"]}</p>
                                     <p>Unnassigned Incidents: {$uI} </p>
-                                    <p>Number of Users: {$numUsers} </p>
+                                    <p>Number of Users: {$numUsers["count"]} </p>
                                 </a>
                             </li>";
                     }                
