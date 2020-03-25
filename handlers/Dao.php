@@ -44,7 +44,7 @@ class Dao{
             $execute = $conn->prepare($query);
             $execute->bindParam(":id", $uid);
             $execute->execute();
-            $result = $execute->fetch_array(PDO::FETCH_ASSOC);
+            $result = $execute->fetchAll(PDO::FETCH_ASSOC);
             return $result;
         }  catch (\PDOException $e) {
             throw new \PDOException($e->getMessage(), (int)$e->getCode());
