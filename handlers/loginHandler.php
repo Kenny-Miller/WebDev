@@ -1,11 +1,11 @@
 <?php
-    require_once 'Dao.php';
+ 
 
     session_start();
 
     echo "<p> hi </p>";
     
-    $dao = new Dao();
+
 
     echo "<p> hi </p>";
      /*
