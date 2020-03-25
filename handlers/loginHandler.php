@@ -6,9 +6,9 @@
     echo "hi"
     
     $dao = new Dao();
-    
+     /*
     $var = $dao->userExists($_POST['username'], $_POST['password']);
-    /*
+   
     if ($dao->userExists($_POST['username'], $_POST['password'])) {
         $_SESSION['auth'] = true;
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspace.html");
