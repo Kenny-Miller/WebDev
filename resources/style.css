@@ -16,6 +16,7 @@ body {
 .footer{
     margin:10px;
     text-align: center;
+    padding:25px;
 }
 
 /* Login */
@@ -60,6 +61,12 @@ body {
 }
 
 /* Workspace */
+.workspace-content{
+    background:#ffffff;
+    margin: 20px 50px;
+    border: solid black 1px; 
+}
+
 #workspace-list{
     display: flex;
     flex-flow: wrap;
@@ -163,7 +170,9 @@ body {
 }
 /* Dashboard */
 .content{
+    background:white;
     margin-top: 20px;
+    border: solid black 1px;
 }
 
 @media only screen and (min-width: 600px){
@@ -181,10 +190,9 @@ body {
 
 #dashboard-sort{
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     background:white;
-    border-radius:15px;
-    box-shadow: 0px 1px 2px 1px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 50%);
 }
 
 #dashboard-itemlist{
@@ -218,7 +226,13 @@ body {
     border-radius:15px;
     border:none;
     margin:5px;
-    background: #58c45c;
+    background: #42b0f5;;
+    color:#ffffff;
+    border:solid 1px black;
+}
+
+.selected{
+    background: #ccc;
 }
 
 /*

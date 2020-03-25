@@ -15,12 +15,12 @@
             <div class="sidebar-item sidebar-item-last">
                 <p class="sidebar-item-text">Username</p>
             </div>
-            <a class="sidebar-item-container  selected">
+            <a class="sidebar-item-container">
                 <img class="sidebar-item-img" src="/resources/images/home.png">
                 <p class="sidebar-item-text">Home</p>
                 <img class="sidebar-item-arrow" src="/resources/images/arrow.png" >
             </a>
-            <a class="sidebar-item-container sidebar-container-last">
+            <a class="sidebar-item-container sidebar-container-last selected">
                 <img class="sidebar-item-img" src="/resources/images/users.png">
                 <p class="sidebar-item-text">Users</p>
                 <img class="sidebar-item-arrow" src="/resources/images/arrow.png">
@@ -28,27 +28,27 @@
         </div>
         
         <div class="content">
-            <form id="dashboard-sort">
-                <h1>Home</h1>
-                <label for="dashboard-sortby">Sort By</label>
-                <select id="dashboard-sortby">
-                    <option>Status</option>
-                    <option>User</option>
-                    <option>Date</option>
-                </select>
-                <input type="submit">
-             </form>
-            <ol id="dashboard-itemlist">
-                <li class="dashboard-item">
-                    <img class="dashboard-item-img" src="/resources/images/incomplete.png">
-                    <p class="dashboard-item-text">Status: Incomplete</p>
-                    <p class="dashboard-item-text">User: User1</p>
-                    <p class="dashboard-item-text">Short Description</p>
-                    <p class="dashboard-item-text">Theres an issue</p>
-                    <button class="dashboard-item-btn">Update</button> 
-                </li>
-            </ol>  
-            <div class="footer">@Copyright 2020 Kenny Miller</div>
+            <div class="user-tile-title">
+                <h2>Users</h2>
+                <ul class="user-tile-list">
+                    <li class="user-tile-item">
+                        <h3>User 1</h3>
+                    </li>
+                    <li class="user-tile-item">
+                        <h3>User 2</h3>
+                    </li>
+                    <li class="user-tile-item">
+                        <h3>User 3</h3>
+                    </li>
+                    <li class="user-tile-item">
+                        <h3>User 4</h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">@Copyright 2020 Kenny Miller</div>
         </div> 
     </body>
 </html>
+
+
