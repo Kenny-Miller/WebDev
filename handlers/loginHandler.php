@@ -19,5 +19,7 @@
        /* header("Location: https://frozen-ravine-42740.herokuapp.com/pages/login.html");
         exit;*/
     }
+    echo "Username {$_POST['username']}";
+    echo "Password {$_POST['password']}"
     echo "{$result}";
 ?>
