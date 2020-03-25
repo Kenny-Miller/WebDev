@@ -6,7 +6,7 @@
     session_start();
     
     $dao = new Dao();
-    
+
     $results = $dao->userExists($_POST['username'], $_POST['password']);
    
     if($results){
@@ -19,10 +19,4 @@
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/login.html");
         exit;
     }
-    /*
-    if (is_null($result) == false) {
-       
-    } else {
-        
-    } */
 ?>
