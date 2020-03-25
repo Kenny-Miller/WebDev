@@ -28,4 +28,13 @@
     
     }
     
+    public function userExists($username, $password){
+        $conn = $this->getConnection();
+        $query = "Select user_id from users where username = :username and password = :password";
+        $execute = $conn->prepare($query);
+        $execute->bindParam(":username", $username);
+        $execute->bindParam(":password", $password);
+        $q->execute();
+    }
+    
 }?>
