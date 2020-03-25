@@ -10,10 +10,10 @@ class Dao{
     public function getConnection() {
         try {
             $connection = new PDO("mysql:host={$this->host};dbname={$this->dbname}", $this->username, $this->password);
-        } catch (Exception $e) {
-            return null;
+            return $connection;
+        } catch (\PDOException $e) {
+            throw new \PDOException($e->getMessage(), (int)$e->getCode());
         }
-        return $connection;
     }
     
     public function userExists($user, $pwd){
@@ -27,9 +27,8 @@ class Dao{
             $execute->bindParam(":user", $user);
             $execute->bindParam(":pwd", $pwd);
             return $execute->execute();
-        } catch(Exception $e){
-            echo print_r($e,1);
-            exit;
+        }  catch (\PDOException $e) {
+            throw new \PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
     
