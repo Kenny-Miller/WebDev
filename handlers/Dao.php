@@ -1,4 +1,5 @@
-<?php class Dao{
+<?php 
+class Dao{
     private $host = 'us-cdbr-iron-east-01.cleardb.net';
     private $dbname = 'heroku_6e96bae022bb61a';
     private $username = 'b6e14923d349d5';
@@ -22,7 +23,7 @@
         }
         
         try{
-            return $connection->query("select")
+            return $connection->query("select");
             
         } catch (Exception $e){
             return null;
@@ -39,4 +40,5 @@
         $q->execute();
     }
     
-}?>
+}
+?>
