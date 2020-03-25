@@ -31,8 +31,8 @@
                 
                     foreach ($workspaces as $workspace){
                         
-                        $numUsers = $dao->getNumUsers($workspace["workspace_id"]);
-                        $uI = $dao->getNumUI($workspace["workspace_id"]);
+                        $numUsers = $dao->getNumUsers($workspace["workspace_id"])["count"];
+                        $uI = $dao->getNumUI($workspace["workspace_id"])["count";
                         
                         //echo print_r($workspace, 1);
                         echo "<li class=\"workspace-item\">

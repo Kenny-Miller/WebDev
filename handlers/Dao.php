@@ -57,7 +57,7 @@ class Dao{
             return;
         }
         try{
-            $query = "Select count(status_id) from tasks where workspace_id = :wid and status_id = 1 group by status_id;";
+            $query = "Select count(status_id) as count from tasks where workspace_id = :wid and status_id = 1 group by status_id;";
             $execute = $conn->prepare($query);
             $execute->bindParam(":wid", $wid);
             $execute->execute();
@@ -74,7 +74,7 @@ class Dao{
             return;
         }
         try{
-            $query = "Select count(Distinct(user_id))from workspaces where workspace_id = :wid group by workspace_id;";
+            $query = "Select count(Distinct(user_id)) as count from workspaces where workspace_id = :wid group by workspace_id;";
             $execute = $conn->prepare($query);
             $execute->bindParam(":wid", $wid);
             $execute->execute();
