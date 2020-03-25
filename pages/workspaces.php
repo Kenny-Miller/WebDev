@@ -41,7 +41,7 @@
                             $numUsersCount = $numUsers["count"];
                         }
                         if($uI){
-                            $numUI= $ui["count"];
+                            $numUI= $uI["count"];
                         }
                                                 
                         //echo print_r($workspace, 1);
