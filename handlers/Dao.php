@@ -37,7 +37,7 @@ class Dao{
         $execute = $conn->prepare($query);
         $execute->bindParam(":username", $username);
         $execute->bindParam(":password", $password);
-        $execute->execute();
+        return $execute->execute();
     }
     
 }
