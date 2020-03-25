@@ -29,6 +29,7 @@
                         echo print_r($_SESSION);
                         unset($_SESSION["messsage"]);
                         $_SESSION["message"] = null;
+                        echo print_r($_SESSION);
                     }
                 ?>
             <ol id="workspace-list">
