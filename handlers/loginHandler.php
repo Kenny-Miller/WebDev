@@ -5,7 +5,7 @@
 
     echo "<p> hi </p>"
     
-    $dao = new Dao();
+   
 
     echo "<p> hsi </p>"
      /*
