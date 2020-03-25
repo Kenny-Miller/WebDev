@@ -3,9 +3,11 @@
 
     session_start();
 
-    echo "hi"
+    echo "<p> hi </p>"
     
     $dao = new Dao();
+
+    echo "<p> hsi </p>"
      /*
     $var = $dao->userExists($_POST['username'], $_POST['password']);
    
