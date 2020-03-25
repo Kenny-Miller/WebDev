@@ -21,5 +21,5 @@
     }
     echo "Username {$_POST['username']}";
     echo "Password {$_POST['password']}";
-    echo print_r($result, false);
+    echo print_r($result, 1);
 ?>
