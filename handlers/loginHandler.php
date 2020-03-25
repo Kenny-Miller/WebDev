@@ -1,13 +1,13 @@
 <?php
     require_once 'Dao.php';
 
-  
+    session_start();
 
-    echo "<p> hi </p>"
+    echo "<p> hi </p>";
     
-   
+    $dao = new Dao();
 
-    echo "<p> hsi </p>"
+    echo "<p> hi </p>";
      /*
     $var = $dao->userExists($_POST['username'], $_POST['password']);
    
@@ -20,5 +20,4 @@
         $_SESSION['message'] = "Invalid username or password";
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/login.php");
     }*/
-        header("Location: https://frozen-ravine-42740.herokuapp.com/pages/login.php");
 ?>
