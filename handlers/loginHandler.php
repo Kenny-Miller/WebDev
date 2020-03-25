@@ -7,9 +7,13 @@
     
     $dao = new Dao();
     
-    $result = $dao->userExists($_POST['username'], $_POST['password']);
+    $results = $dao->userExists($_POST['username'], $_POST['password']);
    
-    echo "results: {$result}";
+    if($results){
+        echo "it has stuff";
+    } else{
+        echo "it doesnt";
+    }
     /*
     if (is_null($result) == false) {
         $_SESSION['auth'] = true;
