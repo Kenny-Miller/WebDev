@@ -8,7 +8,9 @@
     $dao = new Dao();
     
     $result1 = $dao->userExists("test", "123");
-    $result2 = $dao->userExists("t", "1");
+
+    $dao2 = new Dao();
+    $result2 = $dao2->userExists("t", "1");
    
     /*
     if ($dao->userExists($_POST['username'], $_POST['password'])) {
@@ -21,8 +23,7 @@
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/login.html");
         exit;
     } */
-    echo "Username {$_POST['username']}";
-    echo "Password {$_POST['password']}";
+    
     echo print_r($result1, 1);
     echo "     gap    ";
     echo print_r($result2, 1);
