@@ -1,5 +1,10 @@
 <?php
   session_start();
+
+  $username = "";
+  if(isset($_SESSION['form'])){
+      $username = $_SESSION['form']['username'];
+  }
 ?>
 <html>
     <head>
@@ -15,6 +20,7 @@
             <form id="login-form" method="POST" action="/handlers/loginHandler.php">
                 <h1 class="heading">Login</h1>
                 <?php
+                    
                     if (isset($_SESSION['message'])) {
                         echo "<div id='error'>{$_SESSION['message']}</div>";
                         unset($_SESSION['messsage']);
@@ -22,7 +28,7 @@
                 ?>
                 <div class="login-form-row">
                     <label class="login-label" for="username">Please enter your username</label>
-                    <input id="username" type="text"  name="username" placeholder="Username">
+                    <input id="username" type="text"  name="username"  value="<?php echo $username; ?>" placeholder="Username">
                 </div>
                 <div class="login-form-row">
                     <label class="login-label" for="password">Please enter your password</label>
