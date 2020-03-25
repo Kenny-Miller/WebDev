@@ -16,28 +16,21 @@ class Dao{
         return $connection;
     }
     
-    public function getWorkspaces(){
-        $connection = $this->getConnetion();
-        if(is_null($connection)){
+    public function userExists($user, $pwd){
+        $conn = $this->getConnection();
+        if(is_null($conn)) {
             return;
         }
-        
         try{
-            return $connection->query("select");
-            
-        } catch (Exception $e){
-            return null;
+            $query = "Select user_id from users where username = :user and password = :pwd";
+            $execute = $conn->prepare($query);
+            $execute->bindParam(":user", $user);
+            $execute->bindParam(":pwd", $pwd);
+            return $execute->execute();
+        } catch(Exception $e){
+            echo print_r($e,1);
+            exit;
         }
-    
-    }
-    
-    public function userExists($username, $password){
-        $conn = $this->getConnection();
-        $query = "Select user_id from users where username = :username and password = :password";
-        $execute = $conn->prepare($query);
-        $execute->bindParam(":username", $username);
-        $execute->bindParam(":password", $password);
-        return $execute->execute();
     }
     
 }
