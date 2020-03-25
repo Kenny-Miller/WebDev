@@ -1,6 +1,7 @@
 <?php
   session_start();
-     error_reporting(E_ALL);
+    
+    error_reporting(E_ALL);
     ini_set('display_errors', 1);
 
   if (!isset($_SESSION['auth']) || !$_SESSION['auth'] ||!isset($_SESSION['uid']))  {
@@ -23,10 +24,12 @@
         </div>
         <div class="workspace-content">
             <h1 class="heading">Your Workspaces</h1>
-            <?php
+            <?php 
+                    session_start();
                     if (isset($_SESSION["message"])) {
                         echo print_r($_SESSION);
                         unset($_SESSION["messsage"]);
+                        echo print_r($_SESSION);
                     }
                 ?>
             <ol id="workspace-list">
