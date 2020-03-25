@@ -39,8 +39,8 @@
                         echo "<li class=\"workspace-item\">
                                 <a href=\"dashboard.html?wk={$workspace["workspace_id"]}\">
                                     <p>{$workspace["workspace_name"]}</p>
-                                    <p>Unnassigned Incidents: {$uI["count"]} </p>
-                                    <p>Number of Users: {$numUsers["count"]} </p>
+                                    <p>Unnassigned Incidents: {$uI["count"]?? 0} </p>
+                                    <p>Number of Users: {$numUsers["count"] ?? 0} </p>
                                 </a>
                             </li>";
                     }                
