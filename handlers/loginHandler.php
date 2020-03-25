@@ -17,5 +17,6 @@
         $_SESSION['auth'] = false;
         $_SESSION['message'] = "Invalid username or password";
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/login.php");
+        exit;
     }
 ?>
