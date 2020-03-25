@@ -51,5 +51,39 @@ class Dao{
         }
     }
     
+    public function getNumUI($wid){
+        $conn = $this->getConnection();
+        if(is_null($conn)) {
+            return;
+        }
+        try{
+            $query = "Select count(status_id) from tasks where workspace_id = :wid and status_id = 1 group by status_id;";
+            $execute = $conn->prepare($query);
+            $execute->bindParam(":wid", $wid);
+            $execute->execute();
+            $result = $execute->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+        }  catch (\PDOException $e) {
+            throw new \PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+    
+    public function getNumUsers($wid){
+        $conn = $this->getConnection();
+        if(is_null($conn)) {
+            return;
+        }
+        try{
+            $query = "Select count(Distinct(user_id))from workspaces where workspace_id = :wid group by workspace_id;";
+            $execute = $conn->prepare($query);
+            $execute->bindParam(":wid", $wid);
+            $execute->execute();
+            $result = $execute->fetch(PDO::FETCH_ASSOC);
+            return $result;
+        }  catch (\PDOException $e) {
+            throw new \PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+    
 }
 ?>
