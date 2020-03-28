@@ -64,7 +64,7 @@
                     <option value="user">User</option>
                     <option value="date">Date</option>
                 </select>
-                <input type="hidden" name="wid" value="<?=$_SESSION['wid']?>">
+                <input type="hidden" name="wid" value="<?=$_GET['wid']?>">
                 <input type="submit">
              </form>
             <ol id="dashboard-itemlist">
