@@ -10,8 +10,8 @@
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/login.php");
         exit;
     }
-    
-    $hasAccess = dao->checkWAccess($_GET['wk']);
+    echo $_GET['wk'];
+   // $hasAccess = dao->checkWAccess($_GET['wk']);
 ?>
 
 
