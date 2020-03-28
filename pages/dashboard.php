@@ -1,6 +1,8 @@
 <?php
     session_start();
     require_once dirname(__FILE__). '/../handlers/Dao.php';
+   
+        
     $dao = new Dao();
 
     error_reporting(E_ALL);
@@ -78,6 +80,7 @@
                 
                     foreach ($tasks as $task){
                         echo "<li class=\"dashboard-item\">";
+                        echo $task['status_desc'];
                         echo "<img class=\"dashboard-item-img\" src=\"/resources/images/{$task['status_desc']}.png\">";
                         echo "<p class=\"dashboard-item-text\">Status: {$task['status_desc']}</p>";
                         echo "<p class=\"dashboard-item-text\">User: {$task['first_name']} {$task['last_name']}</p>";
