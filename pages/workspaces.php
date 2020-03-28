@@ -49,7 +49,7 @@
                                                 
                         //echo print_r($workspace, 1);
                         echo "<li class=\"workspace-item\">
-                                <a href=\"dashboard.php?wk={$workspace["workspace_id"]}&o=status\">
+                                <a href=\"dashboard.php?wid={$workspace["workspace_id"]}&o=status\">
                                     <p>{$workspace["workspace_name"]}</p>
                                     <p>Unnassigned Incidents: {$numUsersCount} </p>
                                     <p>Number of Users: {$numUI} </p>
