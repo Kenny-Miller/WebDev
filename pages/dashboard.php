@@ -69,6 +69,7 @@
             <ol id="dashboard-itemlist">
                 <?php
                     $tasks;
+                    echo $_GET['wid'];
                     if($_GET['o'] == 'user'){
                         $tasks = $dao->homeSortBy($_GET['wid'], "user_id");
                     } else if($_GET['o'] == 'date'){
@@ -78,7 +79,8 @@
                     }
                 
                     foreach ($tasks as $task){
-                        echo "<li class=\"dashboard-item\">";
+                        $class = strtolower($task['status_desc']);
+                        echo "<li class=\"dashboard-item {$class}\">";
                         //echo "<img class=\"dashboard-item-img\" src=\"/resources/images/{$task['status_desc']}.png\">";
                         echo "<p class=\"dashboard-item-text\">Status: {$task['status_desc']}</p>";
                         echo "<p class=\"dashboard-item-text\">User: {$task['first_name']} {$task['last_name']}</p>";
