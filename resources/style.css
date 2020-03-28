@@ -236,7 +236,7 @@ body {
     border:solid 1px black;
 }
 
-.unnassigned{
+.unassigned{
     background: #ff7070;
 }
 
@@ -244,7 +244,7 @@ body {
     background: #fff170;
 }
 
-.complete{
+.completed{
     background: #70ff7c;
 }
 
