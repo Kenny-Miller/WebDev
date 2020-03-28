@@ -22,8 +22,8 @@
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspaces.php");
         exit;
     }
-?>
 
+?>
 
 <html>
     <head>
@@ -66,6 +66,26 @@
                 <input type="submit">
              </form>
             <ol id="dashboard-itemlist">
+                <?php
+                    $tasks;
+                    if($_GET['o'] == 'user'){
+                        $tasks = $dao->homeSortBy($_GET['wid'], "user_id");
+                    } else if($_GET['0'] == 'date'){
+                        $tasks = $dao->homeSortBy($_GET['wid'], "created_date");
+                    } else{
+                        $tasks = $dao->homeSortBy($_GET['wid'], "status_id");
+                    }
+                
+                    foreach ($tasks as $task){
+                        echo "<li class=\"dashboard-item\">";
+                        echo "<img class=\"dashboard-item-img\" src=\"/resources/images/{$task['status_desc']}.png\">"
+                        echo "<p class=\"dashboard-item-text\">Status: {$task['status_desc']}</p>"
+                        echo "<p class=\"dashboard-item-text\">User: {$task['first_name']} {$task['last_name']}</p>"
+                        echo "<p class=\"dashboard-item-text\">{$task['task_name']}</p>"
+                        echo "<button class=\"dashboard-item-btn\">Update</button>"     
+                        echo"</li>";
+                    }
+                ?>    
                 <li class="dashboard-item">
                     <img class="dashboard-item-img" src="/resources/images/incomplete.png">
                     <p class="dashboard-item-text">Status: Incomplete</p>

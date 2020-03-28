@@ -107,5 +107,28 @@ class Dao{
         }
     }
     
+     public function homeSortBy($wid, $order){
+        $conn = $this->getConnection();
+        if(is_null($conn)) {
+            return;
+        }
+        try{
+            $query = "select * from tasks t
+                join users u on u.user_id = t.user_id
+	            join statuses s	on s.status_id = t.status_id;
+                where workspace_id = :wid order by :order";
+            $execute = $conn->prepare($query);
+            $execute->bindParam(":wid", $wid);
+            $execute->bindParam(":order", $order);
+            $execute->execute();
+            $result = $execute->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+        }  catch (\PDOException $e) {
+            throw new \PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+    
+   
+    
 }
 ?>
