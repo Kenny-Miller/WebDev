@@ -59,23 +59,23 @@
             <form id="dashboard-sort" action="/pages/dashboard.php" method="get">
                 <h1>Home</h1>
                 <label for="dashboard-sortby">Sort By</label>
+                <input type="hidden" name="wid" value="<?=$_GET['wid']?>">
                 <select id="dashboard-sortby" name="o">
                     <option value="status">Status</option>
                     <option value="user">User</option>
                     <option value="date">Date</option>
                 </select>
-                <input type="hidden" name="wid" value="<?=$_GET['wid']?>">
                 <input type="submit">
              </form>
             <ol id="dashboard-itemlist">
                 <?php
                     $tasks;
                     if($_GET['o'] == 'user'){
-                        $tasks = $dao->homeSortBy($_GET['wid'], "last_name");
+                        $tasks = $dao->homeSortByUser($_GET['wid']);
                     } else if($_GET['o'] == 'date'){
-                        $tasks = $dao->homeSortBy($_GET['wid'], "created_date");
+                        $tasks = $dao->homeSortByDate($_GET['wid'];
                     } else{
-                        $tasks = $dao->homeSortBy($_GET['wid'], "status_id");
+                        $tasks = $dao->homeSortByStatus($_GET['wid']);
                     }
                     echo print_r($tasks);   
                 
