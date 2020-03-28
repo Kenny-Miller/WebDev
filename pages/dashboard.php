@@ -1,8 +1,8 @@
 <?php
     session_start();
     require_once dirname(__FILE__). '/../handlers/Dao.php';
-    require_once dirname(__FILE__). '/../resources/images/Incomplete.png';
-    require_once dirname(__FILE__). '/../resources/images/Completed.png';
+    require_once dirname '/resources/images/Incomplete.png';
+    require_once dirname '/resources/images/Completed.png';
         
     $dao = new Dao();
 
