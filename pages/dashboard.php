@@ -72,11 +72,13 @@
                     $tasks;
                     if($_GET['o'] == 'user'){
                         $tasks = $dao->homeSortByUser($_GET['wid']);
-                    //} else if($_GET['o'] == 'date'){
-                       // $tasks = $dao->homeSortByDate($_GET['wid'];
+                    } else if($_GET['o'] == 'date'){
+                        $tasks = $dao->homeSortByDate($_GET['wid'];
                     } else{
                         $tasks = $dao->homeSortByStatus($_GET['wid']);
                     }
+                    
+                   
                 
                     foreach ($tasks as $task){
                         $class = strtolower($task['status_desc']);
