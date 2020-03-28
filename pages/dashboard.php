@@ -77,7 +77,7 @@
                     } else{
                         $tasks = $dao->homeSortByStatus($_GET['wid']);
                     }
-                    
+                    echo print_r($tasks);
                    
                 
                     foreach ($tasks as $task){
