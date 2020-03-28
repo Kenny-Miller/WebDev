@@ -236,6 +236,18 @@ body {
     border:solid 1px black;
 }
 
+.unnassigned{
+    background: #ff7070;
+}
+
+.incomplete{
+    background: #fff170;
+}
+
+.complete{
+    background: #70ff7c;
+}
+
 .selected{
     background: #ccc;
 }

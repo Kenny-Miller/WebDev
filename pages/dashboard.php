@@ -78,8 +78,8 @@
                     }
                 
                     foreach ($tasks as $task){
-                        echo "<li class=\"dashboard-item\">";
-                        echo "<img class=\"dashboard-item-img\" src=\"/resources/images/{$task['status_desc']}.png\">";
+                        echo "<li class=\"dashboard-item {strtolower($task['status_desc'])}\">";
+                        //echo "<img class=\"dashboard-item-img\" src=\"/resources/images/{$task['status_desc']}.png\">";
                         echo "<p class=\"dashboard-item-text\">Status: {$task['status_desc']}</p>";
                         echo "<p class=\"dashboard-item-text\">User: {$task['first_name']} {$task['last_name']}</p>";
                         echo "<p class=\"dashboard-item-text\">{$task['task_name']}</p>";
