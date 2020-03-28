@@ -80,7 +80,6 @@
                 
                     foreach ($tasks as $task){
                         echo "<li class=\"dashboard-item\">";
-                        echo $task['status_desc'];
                         echo "<img class=\"dashboard-item-img\" src=\"/resources/images/{$task['status_desc']}.png\">";
                         echo "<p class=\"dashboard-item-text\">Status: {$task['status_desc']}</p>";
                         echo "<p class=\"dashboard-item-text\">User: {$task['first_name']} {$task['last_name']}</p>";
@@ -89,14 +88,6 @@
                         echo"</li>";
                     }
                 ?>    
-                <li class="dashboard-item">
-                    <img class="dashboard-item-img" src="/resources/images/incomplete.png">
-                    <p class="dashboard-item-text">Status: Incomplete</p>
-                    <p class="dashboard-item-text">User: User1</p>
-                    <p class="dashboard-item-text">Short Description</p>
-                    <p class="dashboard-item-text">Theres an issue</p>
-                    <button class="dashboard-item-btn">Update</button> 
-                </li>
             </ol>  
             <div class="footer">@Copyright 2020 Kenny Miller</div>
         </div> 
