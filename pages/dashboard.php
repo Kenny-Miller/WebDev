@@ -11,7 +11,7 @@
         exit;
     }
     
-    if(!is_numeric($_GET['wk']) && $_GET['wk'] > 0){
+    if(!is_numeric($_GET['wk']) || $_GET['wk'] <= 0){
         $_SESSION['message'] = "Workspace does not exist";
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspaces.php");
         exit;
