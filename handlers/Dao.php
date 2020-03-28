@@ -1,5 +1,9 @@
 <?php 
+error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+
 class Dao{
+    
     private $host = 'us-cdbr-iron-east-01.cleardb.net';
     private $dbname = 'heroku_6e96bae022bb61a';
     private $username = 'b6e14923d349d5';
