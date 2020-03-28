@@ -12,13 +12,13 @@
         exit;
     }
     
-    if(!is_numeric($_GET['wk']) || $_GET['wk'] <= 0){
+    if(!is_numeric($_GET['wid']) || $_GET['wid'] <= 0){
         $_SESSION['message'] = "Workspace does not exist";
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspaces.php");
         exit;
     }
     
-    if(!$dao->hasAccess($_SESSION['uid'], $_GET['wk'])){
+    if(!$dao->hasAccess($_SESSION['uid'], $_GET['wid'])){
         $_SESSION['message'] = "Invalid workspace access";
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspaces.php");
         exit;
