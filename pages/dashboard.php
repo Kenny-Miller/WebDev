@@ -56,7 +56,7 @@
         </div>
         
         <div class="content">
-            <form id="dashboard-sort" action="/dashboard.php?wid=<?php{$_Session['wid']}?>" method="get">
+            <form id="dashboard-sort" action="/dashboard.php?wid=" method="get">
                 <h1>Home</h1>
                 <label for="dashboard-sortby">Sort By</label>
                 <select id="dashboard-sortby" name="o">
