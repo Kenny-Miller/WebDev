@@ -56,22 +56,21 @@
         </div>
         
         <div class="content">
-            <form id="dashboard-sort">
+            <form id="dashboard-sort" action="/dashboard.php?wid=<?php{$_Session['wid']}?>" method="get">
                 <h1>Home</h1>
                 <label for="dashboard-sortby">Sort By</label>
-                <select id="dashboard-sortby">
-                    <option>Status</option>
-                    <option>User</option>
-                    <option>Date</option>
+                <select id="dashboard-sortby" name="o">
+                    <option value="status">Status</option>
+                    <option value="user">User</option>
+                    <option value="date">Date</option>
                 </select>
                 <input type="submit">
              </form>
             <ol id="dashboard-itemlist">
                 <?php
                     $tasks;
-                    echo $_GET['wid'];
                     if($_GET['o'] == 'user'){
-                        $tasks = $dao->homeSortBy($_GET['wid'], "user_id");
+                        $tasks = $dao->homeSortBy($_GET['wid'], "last_name");
                     } else if($_GET['o'] == 'date'){
                         $tasks = $dao->homeSortBy($_GET['wid'], "created_date");
                     } else{
