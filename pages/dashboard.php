@@ -56,7 +56,7 @@
         </div>
         
         <div class="content">
-            <form id="dashboard-sort" action="/pages/dashboard.php?wid=<?=$_SESSION['wid']?>" method="get">
+            <form id="dashboard-sort" action="/pages/dashboard.php" method="get">
                 <h1>Home</h1>
                 <label for="dashboard-sortby">Sort By</label>
                 <select id="dashboard-sortby" name="o">
@@ -64,6 +64,7 @@
                     <option value="user">User</option>
                     <option value="date">Date</option>
                 </select>
+                <input type="hidden" name="wid" value="<?=$_SESSION['wid']?>">
                 <input type="submit">
              </form>
             <ol id="dashboard-itemlist">
