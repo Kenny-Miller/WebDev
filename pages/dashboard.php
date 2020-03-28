@@ -77,7 +77,7 @@
                     } else{
                         $tasks = $dao->homeSortByStatus($_GET['wid']);
                     }*/
-                    echo print_r($tasks);   
+                     $tasks = $dao->homeSortByStatus($_GET['wid']);   
                 
                     foreach ($tasks as $task){
                         $class = strtolower($task['status_desc']);
