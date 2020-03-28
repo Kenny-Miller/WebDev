@@ -23,7 +23,7 @@
                     
                     if (isset($_SESSION['message'])) {
                         echo "<div id='error'>{$_SESSION['message']}</div>";
-                        unset($_SESSION['messsage']);
+                        unset($_SESSION['message']);
                     }
                 ?>
                 <div class="login-form-row">

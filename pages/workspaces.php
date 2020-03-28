@@ -1,9 +1,6 @@
 <?php
   session_start();
-    
-    error_reporting(E_ALL);
-    ini_set('display_errors', 1);
-
+  
   if (!isset($_SESSION['auth']) || !$_SESSION['auth'] ||!isset($_SESSION['uid']))  {
     header("Location: https://frozen-ravine-42740.herokuapp.com/pages/login.php");
     exit;
@@ -26,7 +23,7 @@
             <h1 class="heading">Your Workspaces</h1>
             <?php 
                 if (isset($_SESSION["message"])) {
-                    echo print_r($_SESSION);
+                    echo "<div id='error'>{$_SESSION['message']}</div>";
                     unset($_SESSION["message"]);
                 }
             ?>
