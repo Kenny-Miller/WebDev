@@ -56,11 +56,6 @@
                 <p class="sidebar-item-text">Users</p>
                 <img class="sidebar-item-arrow" src="/resources/images/arrow.png">
             </a>
-            <a class="sidebar-item-container">
-                <img class="sidebar-item-img" src="/resources/images/users.png">
-                <p class="sidebar-item-text">Users</p>
-                <img class="sidebar-item-arrow" src="/resources/images/arrow.png">
-            </a>
             <a class="sidebar-item-container changeWorkplace" href="workspaces.php">
                 <p class="sidebar-item-text">Change Workplaces</p>
             </a>
