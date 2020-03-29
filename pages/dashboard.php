@@ -71,7 +71,7 @@
                             echo "<option value=\"user\">User</option>";
                             echo "<option selected=\"selected\" value=\"date\">Date</option>";
                         } else{
-                            echo "<option selected=\"selected\" value=\"status\">Status</option>";
+                            echo "<option selected=\"selected\"     value=\"status\">Status</option>";
                             echo "<option value=\"user\">User</option>";
                             echo "<option value=\"date\">Date</option>";
                         }
@@ -85,6 +85,7 @@
                     $tasks;
                     if($_GET['o'] == 'user'){
                         $tasks = $dao->homeSortByUser($_GET['wid']);
+                        echo print_r($tasks);
                     } else if($_GET['o'] == 'date'){
                         $tasks = $dao->homeSortByDate($_GET['wid']);
                     } else{
