@@ -85,7 +85,6 @@
                     $tasks;
                     if($_GET['o'] == 'user'){
                         $tasks = $dao->homeSortByUser($_GET['wid']);
-                        echo print_r($tasks);
                     } else if($_GET['o'] == 'date'){
                         $tasks = $dao->homeSortByDate($_GET['wid']);
                     } else{
