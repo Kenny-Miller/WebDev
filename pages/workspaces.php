@@ -58,8 +58,8 @@
                         echo "<li class=\"workspace-item {$wkColor}\">
                                 <a class=\"workspace-link\" href=\"dashboard.php?wid={$workspace["workspace_id"]}&o=status\">
                                     <p>{$workspace["workspace_name"]}</p>
-                                    <p>Unnassigned Incidents: {$numUsersCount} </p>
-                                    <p>Number of Users: {$numUI} </p>
+                                    <p>Number of Users: {$numUsersCount}</p>
+                                    <p>Unnassigned Incidents:  {$numUI} </p>
                                 </a>
                             </li>";
                     }                
