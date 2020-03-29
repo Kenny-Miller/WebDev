@@ -46,9 +46,16 @@
                         if($uI){
                             $numUI= $uI["count"];
                         }
-                                                
-                        //echo print_r($workspace, 1);
-                        echo "<li class=\"workspace-item\">
+                        $wkColor = "";
+                        if($numUI < 5){
+                            $wkColor = 'complete';
+                        } else if ($numUI >= 5 && $numUI < 10){
+                            $wkColor = 'incomplete';
+                        } else{
+                            $wkColor = 'unassigned';
+                        }
+                        
+                        echo "<li class=\"workspace-item\ {$wkColor}">
                                 <a href=\"dashboard.php?wid={$workspace["workspace_id"]}&o=status\">
                                     <p>{$workspace["workspace_name"]}</p>
                                     <p>Unnassigned Incidents: {$numUsersCount} </p>
