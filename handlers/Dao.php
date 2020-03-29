@@ -79,7 +79,8 @@ class Dao{
             return;
         }
         try{
-            $query = "Select workspace_name as name from workspaces where workspace_id = :wid";
+            $query = "Select w.workspace_name as name from workspaces ws
+                join workspace w on w.workspace_id = ws.workspace_id where workspace_id = :wid";
             $execute = $conn->prepare($query);
             $execute->bindParam(":wid", $wid);
             $execute->execute();
