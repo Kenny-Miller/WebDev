@@ -256,11 +256,13 @@ body {
 .logout{
     background: #69ffa0;
     text-decoration: none;
+    color: #000000;
 }
 
 .changeWorkplace{
     background: #ff7369;
     text-decoration: none;
+    color: #000000;
 }
 
 /*
