@@ -136,7 +136,7 @@ class Dao{
             $query = "select * from tasks t
                 join users u on u.user_id = t.user_id
 	            join statuses s	on s.status_id = t.status_id
-                where workspace_id = :wid order by u.last_name";
+                where workspace_id = :wid order by u.last_name, status_id";
             $execute = $conn->prepare($query);
             $execute->bindParam(":wid", $wid);
             $execute->execute();
@@ -156,7 +156,7 @@ class Dao{
             $query = "select * from tasks t
                 join users u on u.user_id = t.user_id
 	            join statuses s	on s.status_id = t.status_id
-                where workspace_id = :wid order by t.created_date";
+                where workspace_id = :wid order by t.created_date, s.status_id ";
             $execute = $conn->prepare($query);
             $execute->bindParam(":wid", $wid);
             $execute->execute();

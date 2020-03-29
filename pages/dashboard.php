@@ -61,9 +61,22 @@
                 <label for="dashboard-sortby">Sort By</label>
                 <input type="hidden" name="wid" value="<?=$_GET['wid']?>">
                 <select id="dashboard-sortby" name="o">
-                    <option value="status">Status</option>
-                    <option value="user">User</option>
-                    <option value="date">Date</option>
+                    <?php
+                        if($_GET['o'] == 'user'){
+                            <option value="status">Status</option>
+                            <option selected="selected" value="user">User</option>
+                            <option value="date">Date</option>
+                        } else if($_GET['o'] == 'date'){
+                            <option value="status">Status</option>
+                            <option value="user">User</option>
+                            <option selected="selected" value="date">Date</option>
+                        } else{
+                            <option selected="selected" value="status">Status</option>
+                            <option value="user">User</option>
+                            <option value="date">Date</option>
+                        }
+
+                    ?>
                 </select>
                 <input type="submit">
              </form>
