@@ -92,14 +92,14 @@
                         
                         $class = strtolower($task['status_desc']);
                         echo "<li class=\"dashboard-item {$class}\">";
-                        echo "<form action=\"/pages/updateTask.php\" method=\"get\">"
+                        echo "<form action=\"/pages/updateTask.php\" method=\"get\">";
                         //echo "<img class=\"dashboard-item-img\" src=\"/resources/images/{$task['status_desc']}.png\">";
                         echo "<p class=\"dashboard-item-text\">Status: {$task['status_desc']}</p>";
                         echo "<p class=\"dashboard-item-text\">User: {$task['first_name']} {$task['last_name']}</p>";
                         echo "<p class=\"dashboard-item-text\">{$task['task_name']}</p>";
                         echo "<input type=\"hidden\" name=\"tid\" value=\"{$task['task_id']}\">"
                         echo "<input type=\"submit\" class=\"dashboard-item-btn\" value=\"update\">";
-                        echo "</form>"
+                        echo "</form>";
                         echo"</li>";
                     }
                 ?>    
