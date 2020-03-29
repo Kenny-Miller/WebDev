@@ -63,17 +63,17 @@
                 <select id="dashboard-sortby" name="o">
                     <?php
                         if($_GET['o'] == 'user'){
-                            echo "<option value=\"status\">Status</option>"
-                            echo "<option selected=\"selected\" value="user">User</option>"
-                            echo "<option value=\"date\">Date</option>"
+                            echo "<option value=\"status\">Status</option>";
+                            echo "<option selected=\"selected\" value=\"user\">User</option>";
+                            echo "<option value=\"date\">Date</option>";
                         } else if($_GET['o'] == 'date'){
-                            echo "<option value=\"status\">Status</option>"
-                            echo "<option value=\"user\">User</option>"
-                            echo "<option selected=\"selected\" value="date">Date</option>"
+                            echo "<option value=\"status\">Status</option>";
+                            echo "<option value=\"user\">User</option>";
+                            echo "<option selected=\"selected\" value=\"date\">Date</option>";
                         } else{
-                            echo "<option selected=\"selected\" value="status">Status</option>"
-                            echo "<option value=\"user\">User</option>"
-                            echo "<option value=\"date\">Date</option>"
+                            echo "<option selected=\"selected\" value=\"status\">Status</option>";
+                            echo "<option value=\"user\">User</option>";
+                            echo "<option value=\"date\">Date</option>";
                         }
 
                     ?>
