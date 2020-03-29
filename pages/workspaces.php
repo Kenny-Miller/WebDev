@@ -48,7 +48,7 @@
                         }
                         $wkColor = "";
                         if($numUI < 5){
-                            $wkColor = 'complete';
+                            $wkColor = 'completed';
                         } else if ($numUI >= 5 && $numUI < 10){
                             $wkColor = 'incomplete';
                         } else{
