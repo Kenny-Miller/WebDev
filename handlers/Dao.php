@@ -112,7 +112,7 @@ class Dao{
             return;
         }
         try{
-            $query = "Select count(Distinct(user_id)) as count from workspaces where workspace_id = :wid group by workspace_id;";
+            $query = "Select count(Distinct(user_id)) as count from workspaces where workspace_id = :wid group by user_id;";
             $execute = $conn->prepare($query);
             $execute->bindParam(":wid", $wid);
             $execute->execute();
