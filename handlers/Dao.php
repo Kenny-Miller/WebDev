@@ -61,7 +61,7 @@ class Dao{
             return;
         }
         try{
-            $query = "Select concat(first_name, \" \", last_name) from users where user_id = :uid";
+            $query = "Select concat(first_name, \" \", last_name) as name from users where user_id = :uid";
             $execute = $conn->prepare($query);
             $execute->bindParam(":uid", $uid);
             $execute->execute();
@@ -78,7 +78,7 @@ class Dao{
             return;
         }
         try{
-            $query = "Select workspace_name from workspaces where workspace_id = :wid";
+            $query = "Select workspace_name as name from workspaces where workspace_id = :wid";
             $execute = $conn->prepare($query);
             $execute->bindParam(":wid", $wid);
             $execute->execute();

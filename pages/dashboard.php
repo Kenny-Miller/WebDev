@@ -37,14 +37,13 @@
             <div class="sidebar-item">
                 <?php
                     $wkName = $dao->getWorkspaceName($_GET['wid']);
-                    echo "<p class=\"sidebar-item-text\">{$wkName}</p>";
+                    echo "<p class=\"sidebar-item-text\">{$wkName['name']}</p>";
                 ?>
             </div>
             <div class="sidebar-item sidebar-item-last">
                 <?php
                     $username = $dao->getUsername($_GET['wid']);
-                    echo print_r($username);
-                    echo "<p class=\"sidebar-item-text\">{$username}</p>";
+                    echo "<p class=\"sidebar-item-text\">{$username['name']}</p>";
                 ?>
             </div>
             <a class="sidebar-item-container  selected">
