@@ -35,10 +35,16 @@
         </div>
         <div class="sidebar">
             <div class="sidebar-item">
-                <p class="sidebar-item-text">Workplace</p>
+                <?php
+                    $wkName = $dao->getWorkspaceName($_GET['wid']);
+                    echo "<p class=\"sidebar-item-text\">{$wkName}</p>";
+                ?>
             </div>
             <div class="sidebar-item sidebar-item-last">
-                <p class="sidebar-item-text">Username</p>
+                <?php
+                    $username = $dao->getUsername($_GET['wid']);
+                    echo "<p class=\"sidebar-item-text\">{$username}</p>";
+                ?>
             </div>
             <a class="sidebar-item-container  selected">
                 <img class="sidebar-item-img" src="/resources/images/home.png">
@@ -68,7 +74,7 @@
                             echo "<option value=\"user\">User</option>";
                             echo "<option selected=\"selected\" value=\"date\">Date</option>";
                         } else{
-                            echo "<option selected=\"selected\"     value=\"status\">Status</option>";
+                            echo "<option selected=\"selected\" value=\"status\">Status</option>";
                             echo "<option value=\"user\">User</option>";
                             echo "<option value=\"date\">Date</option>";
                         }
@@ -89,7 +95,6 @@
                     }
                 
                     foreach ($tasks as $task){
-                        
                         $class = strtolower($task['status_desc']);
                         echo "<li class=\"dashboard-item {$class}\">";
                         echo "<form action=\"/pages/updateTask.php\" method=\"get\">";
