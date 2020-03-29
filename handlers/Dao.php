@@ -44,7 +44,8 @@ class Dao{
             return;
         }
         try{
-            $query = "Select * from workspaces where user_id = :uid";
+            $query = "Select * from workspaces ws
+                join workspace w on ws.workspace_id = w.workspace_id where user_id = :uid";
             $execute = $conn->prepare($query);
             $execute->bindParam(":uid", $uid);
             $execute->execute();
@@ -112,7 +113,7 @@ class Dao{
             return;
         }
         try{
-            $query = "Select count(Distinct(user_id)) as count from workspaces where workspace_id = :wid group by user_id;";
+            $query = "Select count(Distinct(user_id)) as count from workspaces where workspace_id = :wid group by workspace_id;";
             $execute = $conn->prepare($query);
             $execute->bindParam(":wid", $wid);
             $execute->execute();
