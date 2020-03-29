@@ -90,6 +90,10 @@ body {
     box-shadow: 0px 0px 5px #000;
 }
 
+.workspace-link{
+    text-decoration:none;
+}
+
 /* sidebar*/
 .sidebar{
     display:flex;
