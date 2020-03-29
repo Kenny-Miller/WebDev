@@ -56,6 +56,17 @@
                 <p class="sidebar-item-text">Users</p>
                 <img class="sidebar-item-arrow" src="/resources/images/arrow.png">
             </a>
+            <a class="sidebar-item-container">
+                <img class="sidebar-item-img" src="/resources/images/users.png">
+                <p class="sidebar-item-text">Users</p>
+                <img class="sidebar-item-arrow" src="/resources/images/arrow.png">
+            </a>
+            <a class="sidebar-item-container changeWorkplace" href="workspaces.php">
+                <p class="sidebar-item-text">Change Workplaces</p>
+            </a>
+            <a class="sidebar-item-container sidebar-container-last logout" href="/handlers/logoutHandler.php">
+                <p class="sidebar-item-text">Logout</p>
+            </a>
         </div>
         
         <div class="content">

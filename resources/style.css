@@ -253,6 +253,14 @@ body {
     background: #ccc;
 }
 
+.logout{
+    background: #69ffa0;
+}
+
+.changeWorkplace{
+    background: #ff7369;
+}
+
 /*
 .login-tile {
     text-align: center;
