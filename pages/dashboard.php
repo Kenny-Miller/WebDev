@@ -4,9 +4,6 @@
         
     $dao = new Dao();
 
-    error_reporting(E_ALL);
-    ini_set('display_errors', 1);
-
     if (!isset($_SESSION['auth']) || !$_SESSION['auth'] ||!isset($_SESSION['uid']))  {
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/login.php");
         exit;
@@ -93,13 +90,24 @@
                    
                 
                     foreach ($tasks as $task){
+                        
+                        $user = "";
+                        $desc = "";
+                        if(isset($task['user_id']){
+                            $user = $task['user_id'];
+                        }
+                        if(isset($task['description'])){
+                            $desc = $task['description'];
+                        }
+                           
+                        
                         $class = strtolower($task['status_desc']);
                         echo "<li class=\"dashboard-item {$class}\">";
                         //echo "<img class=\"dashboard-item-img\" src=\"/resources/images/{$task['status_desc']}.png\">";
                         echo "<p class=\"dashboard-item-text\">Status: {$task['status_desc']}</p>";
-                        echo "<p class=\"dashboard-item-text\">User: {$task['first_name']} {$task['last_name']}</p>";
+                        echo "<p class=\"dashboard-item-text\">User: {$user}</p>";
                         echo "<p class=\"dashboard-item-text\">{$task['task_name']}</p>";
-                        echo "<button class=\"dashboard-item-btn\">Update</button>";     
+                        echo "<button class=\"dashboard-item-btn\">View</button>";     
                         echo"</li>";
                     }
                 ?>    
