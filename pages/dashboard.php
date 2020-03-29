@@ -56,10 +56,10 @@
                 <p class="sidebar-item-text">Users</p>
                 <img class="sidebar-item-arrow" src="/resources/images/arrow.png">
             </a>
-            <a class="sidebar-item-container changeWorkplace" href="workspaces.php">
+            <a id="changeWorkplace" class="sidebar-item-container" href="workspaces.php">
                 <p class="sidebar-item-text">Change Workplaces</p>
             </a>
-            <a class="sidebar-item-container sidebar-container-last logout" href="/handlers/logoutHandler.php">
+            <a id="logout" class="sidebar-item-container sidebar-container-last" href="/handlers/logoutHandler.php">
                 <p class="sidebar-item-text">Logout</p>
             </a>
         </div>
@@ -89,6 +89,9 @@
                 </select>
                 <input type="submit">
              </form>
+            <a id="addTask" href="addTask.php?=<?=$_GET['wid']?>">
+               <p>Add Task</p>
+            </a>
             <ol id="dashboard-itemlist">
                 <?php
                     $tasks;

@@ -258,14 +258,20 @@ body {
     background: #ccc;
 }
 
-.logout{
+#logout{
     background: #69ffa0;
     text-decoration: none;
     color: #000000;
 }
 
-.changeWorkplace{
+#changeWorkplace{
     background: #ff7369;
+    text-decoration: none;
+    color: #000000;
+}
+
+#addTask{
+    background: #69ffa0;
     text-decoration: none;
     color: #000000;
 }
