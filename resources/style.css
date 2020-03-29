@@ -214,7 +214,7 @@ body {
     border-radius: 15px;
     text-align:center;
     margin:5px;
-    padding: 5px;
+    padding: 15px;
     box-shadow: 0px 0px 5px #000;
 }
 
@@ -225,14 +225,15 @@ body {
 .dashboard-item-text{
     margin:0px;
     padding:0px;
+    max-width:200px;
 }
 
 .dashboard-item-btn{
     border-radius:15px;
     border:none;
     margin:5px;
-    background: #42b0f5;;
-    color:#ffffff;
+    background: #EFEFEF;
+    color:#000000;
     border:solid 1px black;
 }
 
