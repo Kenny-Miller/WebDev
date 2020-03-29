@@ -255,10 +255,12 @@ body {
 
 .logout{
     background: #69ffa0;
+    text-decoration: none;
 }
 
 .changeWorkplace{
     background: #ff7369;
+    text-decoration: none;
 }
 
 /*

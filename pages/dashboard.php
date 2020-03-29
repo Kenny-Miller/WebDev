@@ -42,7 +42,7 @@
             </div>
             <div class="sidebar-item sidebar-item-last">
                 <?php
-                    $username = $dao->getUsername($_GET['wid']);
+                    $username = $dao->getUsername($_SESSION['uid']);
                     echo "<p class=\"sidebar-item-text\">{$username['name']}</p>";
                 ?>
             </div>
