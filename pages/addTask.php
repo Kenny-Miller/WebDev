@@ -37,8 +37,8 @@ error_reporting(E_ALL);
         </div>
         <div class="container">
             <form id="addTaskForm" class="task-form" method="POST" action="/pages/addTaskHandler.php">
-                <h1 class="heading">Add Task</h1>
-                <div class="task-form-row">
+                <h1 class="heading task-header">Add Task</h1>
+                <div class="task-input-container">
                     <label class="task-label" for="task-user">Select a User</label>
                     <select id="task-user">
                         <option value="none">Unnassigned</option>
@@ -51,7 +51,7 @@ error_reporting(E_ALL);
                         ?>
                     </select>
                 </div>
-                <div class="task-form-row">
+                <div class="task-input-container">
                     <label class="task-label" for="task-status">Select a Status</label>
                     <select id="task-status">
                         <?php
@@ -62,11 +62,11 @@ error_reporting(E_ALL);
                         ?>
                     </select>
                 </div>
-                <div class="task-form-row">
+                <div class="task-text">
                     <label class="task-label" for="task-text" >Enter a Description</label>
                     <textarea name="text" id="task-text" form="addTaskForm"></textarea>
                 </div>
-                <div class="task-form-row">
+                <div class="task-submit">
                     <input id="task-submit"  type="submit" value="AddTask">
                 </div>
             </form>
