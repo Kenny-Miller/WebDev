@@ -39,17 +39,19 @@
     $email = filter_var($_POST['user'], FILTER_SANITIZE_EMAIL);
     
     $uid = $dao->validUser($wid, $email);
-    if($uid || $email != 'none'){
+    echo print_r($uid);
+    echo $email;
+    /*if(!$uid && $email != 'none'){
         $_SESSION['message'] = "Error occured trying to add task. Please try again.";
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspaces.php?wid={$wid}");
         exit;
-    }
+    }*/
     
     $text = filter_var($_POST['text'], FILTER_SANITIZE_SPECIAL_CHARS);
     
     if($email == 'none'){
-        $dao->addTask($wid,$sid,$text);
-        header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$wid}");
+       // $dao->addTask($wid,$sid,$text);
+       // header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$wid}");
         exit;
     } else{
         echo print_r($uid);
