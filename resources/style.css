@@ -297,9 +297,8 @@ body {
 
 #task-user, #task-status{
     border-radius:15px;
-    background: #ddd;
     border: black solid 1px;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
 }
 

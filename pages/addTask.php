@@ -39,7 +39,7 @@ error_reporting(E_ALL);
             <form class="task-form" method="POST" action="/pages/addTaskHandler.php">
                 <h1 class="heading">Add Task</h1>
                 <div class="task-form-row">
-                    <label class="task-label" for="task-user">User</label>
+                    <label class="task-label" for="task-user">Select a User</label>
                     <select id="task-user">
                         <option value="none">Unnassigned</option>
                         <?php
@@ -52,7 +52,7 @@ error_reporting(E_ALL);
                     </select>
                 </div>
                 <div class="task-form-row">
-                    <label class="task-label" for="task-status">Status</label>
+                    <label class="task-label" for="task-status">Select a Status</label>
                     <select id="task-status">
                         <?php
                             $statuses = $dao->getStatuses();
@@ -63,7 +63,7 @@ error_reporting(E_ALL);
                     </select>
                 </div>
                 <div class="task-form-row">
-                    <label for="task-description" >Description</label>
+                    <label class="task-label" for="task-description" >Enter a Description</label>
                     <input type="textarea" id="task-description" name="description">
                 </div>
                 <div class="task-form-row">
