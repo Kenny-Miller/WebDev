@@ -36,7 +36,7 @@ error_reporting(E_ALL);
             <img src="/resources/images/logo.png" alt="Logo">
         </div>
         <div class="container">
-            <form id="addTaskForm" class="task-form" method="POST" action="/pages/addTaskHandler.php">
+            <form id="addTaskForm" class="task-form" method="POST" action="/handler/addTaskHandler.php">
                 <h1 class="heading task-header">Add Task</h1>
                 <div class="task-input-container">
                     <label class="task-label" for="task-user">Select a User</label>
