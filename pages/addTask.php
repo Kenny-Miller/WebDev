@@ -1,6 +1,10 @@
 <?php
     session_start();
     require_once dirname(__FILE__). '/../handlers/Dao.php';
+
+error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+
         
     $dao = new Dao();
 
@@ -39,7 +43,7 @@
                     <select>
                         <option value="none">Unnassigned</option>
                         <?php
-                            $users = $dao->getUsers($wid);
+                            $users = $dao->getUsers($_GET['wid']);
                             foreach($users as $user){
                                 echo "<option value=\"{$user['email']}\">{$user['first_name']} {$user['last_name']}</option>";
                             }
