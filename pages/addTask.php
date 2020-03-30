@@ -55,10 +55,10 @@ error_reporting(E_ALL);
                     <label>Status</label>
                     <select>
                         <?php
-                            $statuses = $dao->getStatuses();
-                            foreach($statuses as $status){
-                                echo "<option name=\"status\" value=\"{$status['status_id']}\">{$status['status_desc']}</option>";
-                            }
+                            //$statuses = $dao->getStatuses();
+                         //   foreach($statuses as $status){
+                          //      echo "<option name=\"status\" value=\"{$status['status_id']}\">{$status['status_desc']}</option>";
+                           // }
                         ?>
                     </select>
                 </div>
