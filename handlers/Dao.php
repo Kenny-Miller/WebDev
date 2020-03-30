@@ -31,7 +31,7 @@ class Dao{
             $execute->execute();
             $result = $execute->fetch(PDO::FETCH_ASSOC);
             return $result;
-        }  catch (\PDOException $e) {
+        }  catch (PDOException $e) {
             throw new \PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
@@ -49,8 +49,8 @@ class Dao{
             $execute->execute();
             $result = $execute->fetchAll(PDO::FETCH_ASSOC);
             return $result;
-        }  catch (\PDOException $e) {
-            throw new \PDOException($e->getMessage(), (int)$e->getCode());
+        }  catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
     
@@ -66,8 +66,8 @@ class Dao{
             $execute->execute();
             $result = $execute->fetch(PDO::FETCH_ASSOC);
             return $result;
-        }  catch (\PDOException $e) {
-            throw new \PDOException($e->getMessage(), (int)$e->getCode());
+        }  catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
     
@@ -84,8 +84,8 @@ class Dao{
             $execute->execute();
             $result = $execute->fetch(PDO::FETCH_ASSOC);
             return $result;
-        }  catch (\PDOException $e) {
-            throw new \PDOException($e->getMessage(), (int)$e->getCode());
+        }  catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
         }      
     }
     
@@ -101,8 +101,8 @@ class Dao{
             $execute->execute();
             $result = $execute->fetch(PDO::FETCH_ASSOC);
             return $result;
-        }  catch (\PDOException $e) {
-            throw new \PDOException($e->getMessage(), (int)$e->getCode());
+        }  catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
     
@@ -118,8 +118,8 @@ class Dao{
             $execute->execute();
             $result = $execute->fetch(PDO::FETCH_ASSOC);
             return $result;
-        }  catch (\PDOException $e) {
-            throw new \PDOException($e->getMessage(), (int)$e->getCode());
+        }  catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
     
@@ -135,8 +135,8 @@ class Dao{
             $execute->execute();
             $result = $execute->fetchAll(PDO::FETCH_ASSOC);
             return $result;
-        }  catch (\PDOException $e) {
-            throw new \PDOException($e->getMessage(), (int)$e->getCode());
+        }  catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
     
@@ -153,8 +153,8 @@ class Dao{
             $execute->execute();
             $result = $execute->fetch(PDO::FETCH_ASSOC);
             return $result;
-        }  catch (\PDOException $e) {
-            throw new \PDOException($e->getMessage(), (int)$e->getCode());
+        }  catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
     
@@ -165,8 +165,8 @@ class Dao{
         }
         try{
             return $conn->query("select * from statuses",PDO::FETCH_ASSOC);
-        }  catch (\PDOException $e) {
-            throw new \PDOException($e->getMessage(), (int)$e->getCode());
+        }  catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
     
@@ -183,8 +183,8 @@ class Dao{
             $execute->execute();
             $result = $execute->fetch(PDO::FETCH_ASSOC);
             return $result;
-        }  catch (\PDOException $e) {
-            throw new \PDOException($e->getMessage(), (int)$e->getCode());
+        }  catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
     
@@ -203,8 +203,8 @@ class Dao{
             $execute->execute();
             $result = $execute->fetchAll(PDO::FETCH_ASSOC);
             return $result;
-        }  catch (\PDOException $e) {
-            throw new \PDOException($e->getMessage(), (int)$e->getCode());
+        }  catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
     
@@ -223,8 +223,8 @@ class Dao{
             $execute->execute();
             $result = $execute->fetchAll(PDO::FETCH_ASSOC);
             return $result;
-        }  catch (\PDOException $e) {
-            throw new \PDOException($e->getMessage(), (int)$e->getCode());
+        }  catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
     
@@ -243,8 +243,8 @@ class Dao{
             $execute->execute();
             $result = $execute->fetchAll(PDO::FETCH_ASSOC);
             return $result;
-        }  catch (\PDOException $e) {
-            throw new \PDOException($e->getMessage(), (int)$e->getCode());
+        }  catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
     
@@ -263,8 +263,8 @@ class Dao{
             $execute->execute();
             $result = $execute->fetchAll(PDO::FETCH_ASSOC);
             return $result;
-        }  catch (\PDOException $e) {
-            throw new \PDOException($e->getMessage(), (int)$e->getCode());
+        }  catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
    
@@ -284,8 +284,8 @@ class Dao{
             $execute->execute();
             $result = $execute->fetchAll(PDO::FETCH_ASSOC);
             return $result;
-        }  catch (\PDOException $e) {
-            throw new \PDOException($e->getMessage(), (int)$e->getCode());
+        }  catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
     

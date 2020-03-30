@@ -53,9 +53,9 @@
         exit;
     } else{
         echo $uid['user_id'];
-       // $dao->addTask($wid,$sid,$text, $uid['user']);
-       // header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspaces.php?wid={$wid}");
+        $dao->addTask2($wid,$sid,$text, $uid['user']);
+        header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$wid}");
         
-       // exit;
+        exit;
     }  
 ?>
