@@ -36,7 +36,7 @@ error_reporting(E_ALL);
             <img src="/resources/images/logo.png" alt="Logo">
         </div>
         <div class="container">
-            <form class="task-form" method="POST" action="/pages/addTaskHandler.php">
+            <form id="addTaskForm" class="task-form" method="POST" action="/pages/addTaskHandler.php">
                 <h1 class="heading">Add Task</h1>
                 <div class="task-form-row">
                     <label class="task-label" for="task-user">Select a User</label>
@@ -64,7 +64,7 @@ error_reporting(E_ALL);
                 </div>
                 <div class="task-form-row">
                     <label class="task-label" for="task-text" >Enter a Description</label>
-                    <input type="text" id="task-text" rows="10" name="text">
+                    <textarea name="text" id="task-text" form="addTaskForm"></textarea>
                 </div>
                 <div class="task-form-row">
                     <input id="task-submit"  type="submit" value="AddTask">
