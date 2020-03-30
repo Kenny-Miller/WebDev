@@ -125,6 +125,23 @@ class Dao{
         }
     }
     
+    public function getUsers($wid){
+        $conn = $this->getConnection();
+        if(is_null($conn)) {
+            return;
+        }
+        try{
+            $query = "select * from workspaces w join users u on u.user_id = w.user_id where w.workspace_id = :wid";
+            $execute = $conn->prepare($query);
+            $execute->bindParam(":wid", $wid);
+            $execute->execute();
+            $result = $execute->fetch(PDO::FETCH_ASSOC);
+            return $result;
+        }  catch (\PDOException $e) {
+            throw new \PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+    
     public function hasAccess($uid, $wid){
         $conn = $this->getConnection();
         if(is_null($conn)) {
