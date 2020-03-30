@@ -290,6 +290,11 @@ body {
 
 .task-header, .task-text, .task-submit{
     flex-basis:100%;
+    text-align:center;
+}
+
+.task-text, .task-submit{
+    margin:25px 0px;
 }
 
 .task-input-container{
