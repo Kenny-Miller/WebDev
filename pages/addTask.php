@@ -66,7 +66,7 @@ error_reporting(E_ALL);
                     <label class="task-label" for="task-text" >Enter a Description</label>
                     <textarea name="text" id="task-text" rows="8" maxlength="250" form="addTaskForm"></textarea>
                 </div>
-                <input type="hidden" name="wid" value=\"<?=$_GET['wid']?>\">
+                <input type="hidden" name="wid" value="<?=$_GET['wid']?>">
                 <div class="task-submit">
                     <input id="task-submit"  type="submit" value="AddTask">
                 </div>
