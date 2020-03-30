@@ -44,6 +44,7 @@ error_reporting(E_ALL);
                         <option value="none">Unnassigned</option>
                         <?php
                             $users = $dao->getUsers($_GET['wid']);
+                            echo print_r($users);
                             foreach($users as $user){
                                 echo "<option value=\"{$user['email']}\">{$user['first_name']} {$user['last_name']}</option>";
                             }
