@@ -45,7 +45,7 @@ error_reporting(E_ALL);
                         <?php
                             $users = $dao->getUsers($_GET['wid']);
                             foreach($users as $user){
-                                echo "<option name=\"user\" value=\"{$user['email']}\">{$user['first_name']} {$user['last_name']}</option>";
+                                echo "<option value=\"{$user['email']}\">{$user['first_name']} {$user['last_name']}</option>";
                             }
                         
                         ?>
@@ -55,16 +55,16 @@ error_reporting(E_ALL);
                     <label>Status</label>
                     <select>
                         <?php
-                            //$statuses = $dao->getStatuses();
-                         //   foreach($statuses as $status){
-                          //      echo "<option name=\"status\" value=\"{$status['status_id']}\">{$status['status_desc']}</option>";
-                           // }
+                          //  $statuses = $dao->getStatuses();
+                          //  foreach($statuses as $status){
+                           //     echo "<option value=\"{$status['status_id']}\">{$status['status_desc']}</option>";
+                          //  }
                         ?>
                     </select>
                 </div>
                 <div class="task-form-row">
                     <label>Description</label>
-                    <input type="textarea" name="description">
+                    <input type="textarea">
                 </div>
                 <div class="task-form-row">
                     <input id="task-submit"  type="submit" value="AddTask">
