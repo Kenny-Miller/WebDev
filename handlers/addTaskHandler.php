@@ -36,7 +36,7 @@
         exit;
     }
     echo $_POST['user'];
-    $user = filter_var(($_POST['user'], FILTER_SANITIZE_EMAIL));
+    $user = filter_var($_POST['user'], FILTER_SANITIZE_EMAIL);
     echo $user;
         
 ?>
