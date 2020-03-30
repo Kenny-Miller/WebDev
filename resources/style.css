@@ -288,6 +288,10 @@ body {
     justify-content: space-around;
 }
 
+.task-header, .task-text, .task-submit{
+    flex-basis:100%;
+}
+
 .task-input-container{
     flex-basis:40%;
     text-align: center;
