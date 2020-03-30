@@ -248,7 +248,7 @@ class Dao{
         }
     }
     
-    /*public function addTask($wid,$sid, $text){
+    public function addTask($wid,$sid, $text){
         $conn = $this->getConnection();
         if(is_null($conn)) {
             return;
@@ -287,7 +287,7 @@ class Dao{
         }  catch (\PDOException $e) {
             throw new \PDOException($e->getMessage(), (int)$e->getCode());
         }
-    }*/
+    }
     
 }
 ?>
