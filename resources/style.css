@@ -315,6 +315,10 @@ body {
     text-align: center;
 }
 
+#task-text{
+    resize: none;
+}
+
 #task-submit{
     border-radius:15px;
     border:none;
