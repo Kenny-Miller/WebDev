@@ -102,12 +102,11 @@
                     } else{
                         $tasks = $dao->homeSortByStatus($_GET['wid']);
                     }
-                
+                    echo print_r($tasks);
                     foreach ($tasks as $task){
                         $class = strtolower($task['status_desc']);
                         echo "<li class=\"dashboard-item {$class}\">";
                         echo "<form action=\"/pages/updateTask.php\" method=\"get\">";
-                        //echo "<img class=\"dashboard-item-img\" src=\"/resources/images/{$task['status_desc']}.png\">";
                         echo "<p class=\"dashboard-item-text\">Status: {$task['status_desc']}</p>";
                         echo "<p class=\"dashboard-item-text\">User: {$task['first_name']} {$task['last_name']}</p>";
                         echo "<p class=\"dashboard-item-text\">{$task['task_name']}</p>";
