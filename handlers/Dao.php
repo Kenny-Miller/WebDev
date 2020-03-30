@@ -146,7 +146,7 @@ class Dao{
             return;
         }
         try{
-            return $conn-.query("select * from statuses",PDO::FETCH_ASSOC);
+            return $conn->query("select * from statuses",PDO::FETCH_ASSOC);
         }  catch (\PDOException $e) {
             throw new \PDOException($e->getMessage(), (int)$e->getCode());
         }
