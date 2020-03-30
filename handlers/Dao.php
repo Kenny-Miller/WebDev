@@ -1,6 +1,4 @@
 <?php 
-error_reporting(E_ALL);
-    ini_set('display_errors', 1);
 
 class Dao{
     
@@ -135,7 +133,7 @@ class Dao{
             $execute = $conn->prepare($query);
             $execute->bindParam(":wid", $wid);
             $execute->execute();
-            $result = $execute->fetch(PDO::FETCH_ASSOC);
+            $result = $execute->fetchAll(PDO::FETCH_ASSOC);
             return $result;
         }  catch (\PDOException $e) {
             throw new \PDOException($e->getMessage(), (int)$e->getCode());
