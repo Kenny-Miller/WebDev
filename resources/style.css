@@ -276,7 +276,7 @@ body {
     color: #000000;
 }
 
-task-form{
+.task-form{
     box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
     background:#ffffff;
     border-radius:15px;
