@@ -295,7 +295,8 @@ body {
     margin-bottom: 10px;
 }
 
-#task-user, #task-status{
+#task-user, #task-status, #task-text{
+     background:#eeeeee;
     border-radius:15px;
     border: black solid 1px;
     padding: 5px;

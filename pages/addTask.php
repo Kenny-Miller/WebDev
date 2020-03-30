@@ -63,8 +63,8 @@ error_reporting(E_ALL);
                     </select>
                 </div>
                 <div class="task-form-row">
-                    <label class="task-label" for="task-description" >Enter a Description</label>
-                    <input type="textarea" id="task-description" name="description">
+                    <label class="task-label" for="task-text" >Enter a Description</label>
+                    <input type="text" id="task-text" rows="10" name="text">
                 </div>
                 <div class="task-form-row">
                     <input id="task-submit"  type="submit" value="AddTask">
