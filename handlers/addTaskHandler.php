@@ -39,7 +39,12 @@
     $email = filter_var($_POST['user'], FILTER_SANITIZE_EMAIL);
     
     $uid = $dao->validUser($wid, $email);
-    echo print_r($uid);
+    if($uid){
+        echo "uid is true";
+    }
+    if($email == 'none'){
+        echo "email is none";
+    }
     echo $email;
     /*if(!$uid && $email != 'none'){
         $_SESSION['message'] = "Error occured trying to add task. Please try again.";
@@ -54,7 +59,7 @@
        // header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$wid}");
         exit;
     } else{
-        echo print_r($uid);
+        
         //$dao->addTask($wid,$sid,$text, $uid);
         //header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspaces.php?wid={$wid}");
         
