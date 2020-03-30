@@ -19,7 +19,7 @@
         exit;
     }
     
-    if(!$dao->hasAccess($_SESSION['uid'], $_GET['wid'])){
+    if(!$dao->hasAccess($_SESSION['uid'], $_POST['wid'])){
         $_SESSION['message'] = "Invalid workspace access";
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspaces.php");
         exit;
