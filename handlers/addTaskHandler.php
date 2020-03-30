@@ -56,6 +56,6 @@
         //header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspaces.php?wid={$wid}");
         echo "test";
         exit;
-    }  */
+    }  
     exit;
 ?>
