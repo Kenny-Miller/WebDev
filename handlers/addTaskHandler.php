@@ -48,8 +48,8 @@
     $text = filter_var($_POST['text'], FILTER_SANITIZE_SPECIAL_CHARS);
     
     if($email == 'none'){
-       // $dao->addTask($wid,$sid,$text);
-       // header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$wid}");
+        $dao->addTask($wid,$sid,$text);
+        header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$wid}");
         exit;
     } else{
         
