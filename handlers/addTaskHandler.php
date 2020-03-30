@@ -38,7 +38,7 @@
     
     $email = filter_var($_POST['user'], FILTER_SANITIZE_EMAIL);
     
-    if($doa->validUser($wid, $email)){
+    if($dao->validUser($wid, $email) || $email == 'none'){
         echo "valid";
     }
 
