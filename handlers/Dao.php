@@ -140,6 +140,24 @@ class Dao{
         }
     }
     
+    public function validUser($wid, $email){
+        $conn = $this->getConnection();
+        if(is_null($conn)) {
+            return;
+        }
+        try{
+            $query = "select * from workspaces w join users u on u.user_id = w.user_id where w.workspace_id = :wid AND u.email = :email";
+            $execute = $conn->prepare($query);
+            $execute->bindParam(":wid", $wid);
+            $execute->bindParam(":email", $email);
+            $execute->execute();
+            $result = $execute->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+        }  catch (\PDOException $e) {
+            throw new \PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+    
     public function getStatuses(){
         $conn = $this->getConnection();
         if(is_null($conn)) {

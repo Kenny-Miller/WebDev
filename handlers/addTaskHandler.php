@@ -35,8 +35,14 @@
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspaces.php?wid={$wid}");
         exit;
     }
-    echo $_POST['user'];
-    $user = filter_var($_POST['user'], FILTER_SANITIZE_EMAIL);
-    echo $user;
+    
+    $email = filter_var($_POST['user'], FILTER_SANITIZE_EMAIL);
+    
+    if($doa->validUser($wid, $email)){
+        echo "valid";
+    }
+
+
+    
         
 ?>
