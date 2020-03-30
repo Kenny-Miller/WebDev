@@ -39,32 +39,32 @@ error_reporting(E_ALL);
             <form class="task-form" method="POST" action="/pages/addTaskHandler.php">
                 <h1 class="heading">Add Task</h1>
                 <div class="task-form-row">
-                    <label>User</label>
-                    <select>
+                    <label class="task-label" for="task-user">User</label>
+                    <select id="task-user">
                         <option value="none">Unnassigned</option>
                         <?php
                             $users = $dao->getUsers($_GET['wid']);
                             foreach($users as $user){
-                                echo "<option value=\"{$user['email']}\">{$user['first_name']} {$user['last_name']}</option>";
+                                echo "<option name=\"user\" value=\"{$user['email']}\">{$user['first_name']} {$user['last_name']}</option>";
                             }
                         
                         ?>
                     </select>
                 </div>
                 <div class="task-form-row">
-                    <label>Status</label>
-                    <select>
+                    <label class="task-label" for="task-status">Status</label>
+                    <select id="task-status">
                         <?php
                             $statuses = $dao->getStatuses();
                             foreach($statuses as $status){
-                                echo "<option value=\"{$status['status_id']}\">{$status['status_desc']}</option>";
+                                echo "<option name=\"status\" value=\"{$status['status_id']}\">{$status['status_desc']}</option>";
                             }
                         ?>
                     </select>
                 </div>
                 <div class="task-form-row">
-                    <label>Description</label>
-                    <input type="textarea">
+                    <label for="task-description" >Description</label>
+                    <input type="textarea" id="task-description" name="description">
                 </div>
                 <div class="task-form-row">
                     <input id="task-submit"  type="submit" value="AddTask">

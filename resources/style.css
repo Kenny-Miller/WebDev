@@ -276,11 +276,40 @@ body {
     color: #000000;
 }
 
+/* Add and Update Task Pages*/
+
 .task-form{
     box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
     background:#ffffff;
     border-radius:15px;
     margin:0px;
+}
+
+.task-form-row{
+    text-align: center;
+    margin: 30px 0px;
+}
+
+.task-label{
+    display:block;
+    margin-bottom: 10px;
+}
+
+#task-user, #task-status{
+    border-radius:15px;
+    background: #ddd;
+    border: black solid 1px;
+    padding: 10px;
+    text-align: center;
+}
+
+#task-submit{
+    border-radius:15px;
+    border:none;
+    padding: 10px 20px;
+    margin-bottom:25px;
+    background: #42b0f5;
+    color: #ffffff;
 }
 
 
