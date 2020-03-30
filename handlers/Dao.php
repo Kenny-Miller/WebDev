@@ -248,7 +248,46 @@ class Dao{
         }
     }
     
+    public function addTask($wid,$sid, $text){
+        $conn = $this->getConnection();
+        if(is_null($conn)) {
+            return;
+        }
+        try{
+            $query = "insert into tasks(workspace_id, task_name, status_id)
+                values(:wid,:text,:sid)";
+            $execute = $conn->prepare($query);
+            $execute->bindParam(":wid", $wid);
+            $execute->bindParam(":text", $text);
+            $execute->bindParam(":sid", $sid);
+            $execute->execute();
+            $result = $execute->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+        }  catch (\PDOException $e) {
+            throw new \PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
    
+    public function addTask($wid,$sid, $text, $uid){
+        $conn = $this->getConnection();
+        if(is_null($conn)) {
+            return;
+        }
+        try{
+            $query = "insert into tasks(workspace_id, task_name, status_id, user_id)
+                values(:wid,:text,:sid, :uid)";
+            $execute = $conn->prepare($query);
+            $execute->bindParam(":wid", $wid);
+            $execute->bindParam(":text", $text);
+            $execute->bindParam(":sid", $sid);
+            $execute->bindParam(":uid", $uid);
+            $execute->execute();
+            $result = $execute->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+        }  catch (\PDOException $e) {
+            throw new \PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
     
 }
 ?>
