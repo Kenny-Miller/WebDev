@@ -40,7 +40,7 @@ error_reporting(E_ALL);
                 <h1 class="heading task-header">Add Task</h1>
                 <div class="task-input-container">
                     <label class="task-label" for="task-user">Select a User</label>
-                    <select id="task-user">
+                    <select id="task-user" name="user">
                         <option value="none">Unnassigned</option>
                         <?php
                             $users = $dao->getUsers($_GET['wid']);
@@ -53,7 +53,7 @@ error_reporting(E_ALL);
                 </div>
                 <div class="task-input-container">
                     <label class="task-label" for="task-status">Select a Status</label>
-                    <select id="task-status">
+                    <select id="task-status" name="status">
                         <?php
                             $statuses = $dao->getStatuses();
                             foreach($statuses as $status){
@@ -64,8 +64,9 @@ error_reporting(E_ALL);
                 </div>
                 <div class="task-text">
                     <label class="task-label" for="task-text" >Enter a Description</label>
-                    <textarea name="text" id="task-text" form="addTaskForm"></textarea>
+                    <textarea name="text" id="task-text" rows="8" maxlength="250" form="addTaskForm"></textarea>
                 </div>
+                <input type="hidden" name="wid" value=\"<?=$_GET['wid']?>\">
                 <div class="task-submit">
                     <input id="task-submit"  type="submit" value="AddTask">
                 </div>
