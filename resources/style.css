@@ -283,11 +283,14 @@ body {
     background:#ffffff;
     border-radius:15px;
     margin:0px;
+    display:flex;
+    flex-flow: wrap;
+    justify-content: space-around;
 }
 
-.task-form-row{
+.task-input-container{
+    flex-basis:40%;
     text-align: center;
-    margin: 30px 0px;
 }
 
 .task-label{
@@ -296,7 +299,7 @@ body {
 }
 
 #task-user, #task-status, #task-text{
-     background:#eeeeee;
+    background:#eeeeee;
     border-radius:15px;
     border: black solid 1px;
     padding: 5px;
