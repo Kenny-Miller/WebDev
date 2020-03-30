@@ -38,7 +38,7 @@
     
     $email = filter_var($_POST['user'], FILTER_SANITIZE_EMAIL);
     
-    if(!$dao->validUser($wid, $email) || $email != 'none'){
+    if(!$dao->validUser($wid, $email) && $email != 'none'){
         $_SESSION['message'] = "Error occured trying to add task. Please try again.";
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspaces.php?wid={$wid}");
         exit;
