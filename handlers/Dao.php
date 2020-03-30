@@ -151,7 +151,7 @@ class Dao{
             $execute->bindParam(":wid", $wid);
             $execute->bindParam(":email", $email);
             $execute->execute();
-            $result = $execute->fetchAll(PDO::FETCH_ASSOC);
+            $result = $execute->fetch(PDO::FETCH_ASSOC);
             return $result;
         }  catch (\PDOException $e) {
             throw new \PDOException($e->getMessage(), (int)$e->getCode());
