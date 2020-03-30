@@ -50,10 +50,11 @@
         $dao->addTask($wid,$sid,$text);
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspaces.php?wid={$wid}");
         exit;
-    } else{
+    } /*else{
         $uid = dao->getUid($email);
-        $dao->addTask($wid,$sid,$text, $uid);
+        //$dao->addTask($wid,$sid,$text, $uid);
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspaces.php?wid={$wid}");
         exit;
-    }       
+    }  */
+    exit;
 ?>
