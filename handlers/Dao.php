@@ -140,6 +140,18 @@ class Dao{
         }
     }
     
+    public function getStatuses(){
+        $conn = $this->getConnection();
+        if(is_null($conn)) {
+            return;
+        }
+        try{
+            return $conn-.query("select * from statuses",PDO::FETCH_ASSOC);
+        }  catch (\PDOException $e) {
+            throw new \PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+    
     public function hasAccess($uid, $wid){
         $conn = $this->getConnection();
         if(is_null($conn)) {
