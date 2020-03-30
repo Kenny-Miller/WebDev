@@ -268,7 +268,7 @@ class Dao{
         }
     }
    
-    public function addTask($wid,$sid, $text, $uid){
+    public function addTask2($wid,$sid, $text, $uid){
         $conn = $this->getConnection();
         if(is_null($conn)) {
             return;
