@@ -44,16 +44,18 @@
         exit;
     }
     
-   /* $text = filter_var($_Post['text'], FILTER_SANITIZE_SPECIAL_CHARS);
+    $text = filter_var($_Post['text'], FILTER_SANITIZE_SPECIAL_CHARS);
     
     if($email == 'none'){
+        echo"email noen";
        // dao->addTask($wid,$sid,$text);
-        header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspaces.php?wid={$wid}");
-        exit;
+        //header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspaces.php?wid={$wid}");
+       // exit;
     } else{
-        $uid = dao->getUid($email);
+        echo "email";
+       // $uid = dao->getUid($email);
         //dao->addTask2($wid,$sid,$text, $uid);
-        header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspaces.php?wid={$wid}");
-        exit;
+        //header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspaces.php?wid={$wid}");
+       // exit;
     }    */   
 ?>
