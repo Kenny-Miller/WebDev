@@ -54,13 +54,13 @@
 
     if($email == 'none'){
         //echo "made it noen";
-        $dao->addTask($wid,$sid,$text);
+        $dao->updateTask($tid, $wid, $text, $sid);
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$wid}");
         exit;
     } else{
        // echo "made it";
         $num = $uid['user_id'];
-        $dao->addTask2($wid,$sid,$text, $num);
+        $dao->updateTaskU($tid, $wid, $num, $text, $sid);
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$wid}");
         exit;
     } 
