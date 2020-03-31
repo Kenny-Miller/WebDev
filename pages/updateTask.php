@@ -31,10 +31,7 @@ error_reporting(E_ALL);
         exit;
     }
     //Get current tid values: user id status id, and task text;
-    $task = $dao->getTask($_GET['tid']);
-    echo $task['email'];
-    echo $task['status_id'];
-    echo $task['task_name'];
+   
 
 ?>
 <html>
