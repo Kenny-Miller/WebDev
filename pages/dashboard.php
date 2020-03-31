@@ -89,9 +89,11 @@
                 </select>
                 <input type="submit">
              </form>
-            <a id="addTask" href="addTask.php?wid=<?=$_GET['wid']?>">
-               Add Task
-            </a>
+            <div class="addTaskContainerr">
+                <a id="addTask" href="addTask.php?wid=<?=$_GET['wid']?>">
+                    Add Task
+                </a>
+            </div>
             </div>
             <ol id="dashboard-itemlist">
                 <?php
