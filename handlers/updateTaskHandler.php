@@ -32,7 +32,7 @@
     }
     $tid = $_POST['tid'];
     $wid = $_POST['wid'];
-    $sid = $_POST['sid'];
+    $sid = $_POST['status'];
     
     if(!is_numeric($sid) || ($sid != 1 && $sid != 2 && $sid != 3)){
         $_SESSION['message'] = "Error occured trying to update task. Please try again.";
@@ -51,7 +51,6 @@
     
     $text = filter_var($_POST['text'], FILTER_SANITIZE_SPECIAL_CHARS);
     
-    $sid = $_POST['status'];
 
     if($email == 'none'){
         echo "made it noen";
