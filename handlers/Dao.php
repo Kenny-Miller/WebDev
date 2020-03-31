@@ -314,7 +314,7 @@ class Dao{
         }
         try{
             $query = "select * from tasks t
-                join users u on u.user_id = t.user_id where t.task_id = :tid";
+                left join users u on u.user_id = t.user_id where t.task_id = :tid";
             $execute = $conn->prepare($query);
             $execute->bindParam(":tid", $tid);
             $execute->execute();
