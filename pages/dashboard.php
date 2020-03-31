@@ -90,7 +90,7 @@
                 <input type="submit">
              </form>
             <div class="addTaskContainer">
-                <a id="addTask" href="addTask.php?wid=<?=$_GET['wid']?>">
+                <a id="addTaskButton" href="addTask.php?wid=<?=$_GET['wid']?>">
                     Add Task
                 </a>
             </div>
