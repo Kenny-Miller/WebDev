@@ -64,7 +64,7 @@
         </div>
         
         <div class="content">
-            <div>
+            <div "content-heading">
             <form id="dashboard-sort" action="/pages/dashboard.php" method="get">
                 <h1>Home</h1>
                 <label for="dashboard-sortby">Sort By</label>

@@ -199,9 +199,13 @@ body {
 }
 
 .addTaskContainer{
-   
+   padding:15px;
     background:white;
     text-align: center;
+}
+
+.content-heading{
+     box-shadow: 0px 1px 4px rgba(0, 0, 0, 50%);
 }
 
 #addTask{
@@ -211,7 +215,6 @@ body {
 #dashboard-sort{
     text-align: center;
     padding: 15px;
-     box-shadow: 0px 1px 4px rgba(0, 0, 0, 50%);
    
 }
 
