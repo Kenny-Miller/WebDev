@@ -13,25 +13,25 @@ error_reporting(E_ALL);
         exit;
     }
     
-    if(!is_numeric($_POST['wid']) || $_POST['wid'] <= 0){
+    if(!is_numeric($_GET['wid']) || $_GET['wid'] <= 0){
         $_SESSION['message'] = "Workspace does not exist";
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspaces.php");
         exit;
     }
     
-    if(!$dao->hasAccess($_SESSION['uid'], $_POST['wid'])){
+    if(!$dao->hasAccess($_SESSION['uid'], $_GET['wid'])){
         $_SESSION['message'] = "Invalid workspace access";
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspaces.php");
         exit;
     }
 
     //check tid
-    if(!dao->taskExists($_POST['wid'],$_POST['tid'])){
+    if(!dao->taskExists($_GET['wid'],$_GET['tid'])){
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$wid}");
         exit;
     }
     //Get current tid values: user id status id, and task text;
-    $task = dao->getTask($_POST['tid']);
+    $task = dao->getTask($_GET['tid']);
     echo $task['email'];
     echo $task['status_id'];
     echo $task['task_name'];
