@@ -289,5 +289,41 @@ class Dao{
         }
     }
     
+    public function taskExists($wid, $tid){
+        $conn = $this->getConnection();
+        if(is_null($conn)) {
+            return;
+        }
+        try{
+            $query = "select * from tasks where workspace_id = :wid and task_id = :tid";
+            $execute = $conn->prepare($query);
+            $execute->bindParam(":wid", $wid);
+            $execute->bindParam(":tid", $tid);
+            $execute->execute();
+            $result = $execute->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+        }  catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+    
+    public function getTask($tid){
+        $conn = $this->getConnection();
+        if(is_null($conn)) {
+            return;
+        }
+        try{
+            $query = "select * from tasks t
+                join users u on u.user_id = t.user_id where task_id = :tid";
+            $execute = $conn->prepare($query);
+            $execute->bindParam(":tid", $tid);
+            $execute->execute();
+            $result = $execute->fetch(PDO::FETCH_ASSOC);
+            return $result;
+        }  catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+    
 }
 ?>
