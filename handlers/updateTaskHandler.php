@@ -54,14 +54,14 @@
 
     if($email == 'none'){
         //echo "made it noen";
-        $dao->updateTask($tid, $wid, $text, $sid);
-        header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$wid}");
-        exit;
+        echo $dao->updateTask($tid, $wid, $text, $sid);
+       // header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$wid}");
+        //exit;
     } else{
        // echo "made it";
         $num = $uid['user_id'];
-        $dao->updateTaskU($tid, $wid, $num, $text, $sid);
-        header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$wid}");
-        exit;
+        echo $dao->updateTaskU($tid, $wid, $num, $text, $sid);
+        //header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$wid}");
+       // exit;
     } 
 ?>
