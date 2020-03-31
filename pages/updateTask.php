@@ -56,9 +56,9 @@ error_reporting(E_ALL);
                             $users = $dao->getUsers($_GET['wid']);
                             foreach($users as $user){
                                 if($_task['email'] == $user['email']){
-                                    echo $_task['email']
-                                    "is equal to"
-                                    echo $user['email']   
+                                    echo $_task['email'];
+                                   echo "is equal to";
+                                    echo $user['email'];   
                                     echo "<option selected=\"selected\" name=\"user\" value=\"{$user['email']}\">{$user['first_name']} {$user['last_name']}</option>";
                                 } else{
                                     echo "<option name=\"user\" value=\"{$user['email']}\">{$user['first_name']} {$user['last_name']}</option>";
