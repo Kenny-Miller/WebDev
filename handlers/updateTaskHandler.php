@@ -32,6 +32,7 @@
     }
     $tid = $_POST['tid'];
     $wid = $_POST['wid'];
+    $sid = $_POST['sid'];
     
     if(!is_numeric($sid) || ($sid != 1 && $sid != 2 && $sid != 3)){
         $_SESSION['message'] = "Error occured trying to update task. Please try again.";
