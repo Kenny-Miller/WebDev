@@ -219,6 +219,10 @@ body {
     color: #ffffff;
 }
 
+.cancelButton{
+    background: #ff7070;
+}
+
 #dashboard-sort{
     text-align: center;
     padding: 15px;
