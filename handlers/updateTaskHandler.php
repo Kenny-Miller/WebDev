@@ -62,7 +62,7 @@
         $num = $uid['user_id'];
         echo "test";
         $a = $dao->updateTaskU($tid, $num, $text, $sid);
-        $print_r($a);
+        echo print_r($a);
         //header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$wid}");
         echo "test";
         exit;
