@@ -85,6 +85,7 @@ error_reporting(E_ALL);
                     <textarea name="text" id="task-text" rows="8" maxlength="250" form="updateTaskForm"><?=$task['task_name']?></textarea>
                 </div>
                 <input type="hidden" name="wid" value="<?=$_GET['wid']?>">
+                <input type="hidden" name="tid" value="<?=$_GET['tid']?>">
                 <div class="task-submit">
                     <input id="task-submit"  type="submit" value="AddTask">
                 </div>
