@@ -32,10 +32,6 @@ error_reporting(E_ALL);
     }
     //Get current tid values: user id status id, and task text;
     $task = $dao->getTask($_GET['tid']);
-    echo print_r($task);
-    echo $task['email'];
-    echo $task['status_id'];
-    echo $task['task_name'];
 
 ?>
 <html>
@@ -58,9 +54,12 @@ error_reporting(E_ALL);
                         <?php
                             $users = $dao->getUsers($_GET['wid']);
                             foreach($users as $user){
-                                echo "<option name=\"user\" value=\"{$user['email']}\">{$user['first_name']} {$user['last_name']}</option>";
+                                if($_task['email'] == $user['email']){
+                                    echo "<option selected=\"selected\" name=\"user\" value=\"{$user['email']}\">{$user['first_name']} {$user['last_name']}</option>";
+                                } else{
+                                    echo "<option name=\"user\" value=\"{$user['email']}\">{$user['first_name']} {$user['last_name']}</option>";
+                                }
                             }
-                        
                         ?>
                     </select>
                 </div>
@@ -70,14 +69,19 @@ error_reporting(E_ALL);
                         <?php
                             $statuses = $dao->getStatuses();
                             foreach($statuses as $status){
-                                echo "<option name=\"status\" value=\"{$status['status_id']}\">{$status['status_desc']}</option>";
+                                if($_task['status_id'] == $status['status_id']){
+                                    echo "<option selected=\"selected\" name=\"status\" value=\"{$status['status_id']}\">{$status['status_desc']}</option>";
+                                } else{
+                                    echo "<option name=\"status\" value=\"{$status['status_id']}\">{$status['status_desc']}</option>";
+                                }
+                                
                             }
                         ?>
                     </select>
                 </div>
                 <div class="task-text">
                     <label class="task-label" for="task-text" >Enter a Description</label>
-                    <textarea name="text" id="task-text" rows="8" maxlength="250" form="addTaskForm"></textarea>
+                    <textarea name="text" id="task-text" rows="8" maxlength="250" form="addTaskForm" value="<?$task['task_name']?>"></textarea>
                 </div>
                 <input type="hidden" name="wid" value="<?=$_GET['wid']?>">
                 <div class="task-submit">
