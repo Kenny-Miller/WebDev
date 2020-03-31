@@ -90,7 +90,7 @@
              </form>
             <div class="addTaskContainer">
             <a id="addTask" href="addTask.php?wid=<?=$_GET['wid']?>">
-               <p>Add Task</p>
+               Add Task
             </a>
             </div>
             <ol id="dashboard-itemlist">

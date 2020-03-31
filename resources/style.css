@@ -199,8 +199,9 @@ body {
 }
 
 .addTaskContainer{
-     box-shadow: 0px 1px 4px rgba(0, 0, 0, 50%);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 50%);
     background:white;
+    text-align: center;
 }
 
 #addTask{
