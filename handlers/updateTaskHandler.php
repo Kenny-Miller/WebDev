@@ -14,7 +14,7 @@
     }
     
     if(!is_numeric($_POST['wid']) || $_POST['wid'] <= 0){
-        $_SESSION['message'] = "Workspace does test not exist";
+        $_SESSION['message'] = "Workspace does not exist";
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspaces.php");
         exit;
     }
@@ -61,5 +61,5 @@
         //$dao->addTask2($wid,$sid,$text, $num);
        // header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$wid}");
       //  exit;
-    } exit; 
+    } 
 ?>
