@@ -88,11 +88,11 @@ error_reporting(E_ALL);
                 <input type="hidden" name="tid" value="<?=$_GET['tid']?>">
                 <div class="task-submit">
                     <input id="task-submit"  type="submit" value="Update Task">
-                </div>
-                <div class="cancelTaskContainer">
-                <a id="cancelButton" href="dashboard.php?wid=<?=$_GET['wid']?>&o=status">
-                    Cancel
-                </a>
+                    <div class="cancelTaskContainer">
+                        <a class="cancelButton" href="dashboard.php?wid=<?=$_GET['wid']?>&o=status">
+                            Cancel
+                        </a>
+                    </div>
             </div>
             </form>
         </div>
