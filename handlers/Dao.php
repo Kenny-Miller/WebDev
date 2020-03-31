@@ -351,7 +351,7 @@ class Dao{
         }
         try{
             $query = "update tasks
-                      set user_id = null, task_name :text, status_id = :sid
+                      set user_id = null, task_name = :text, status_id = :sid
                       where task_id = :tid";
             $execute = $conn->prepare($query);
             $execute->bindParam(":tid", $tid);
@@ -372,7 +372,7 @@ class Dao{
         }
         try{
             $query = "update tasks
-                      set user_id = :uid, task_name :text, status_id = :sid
+                      set user_id = :uid, task_name = :text, status_id = :sid
                       where task_id = :tid";
             $execute = $conn->prepare($query);
             $execute->bindParam(":tid", $tid);
