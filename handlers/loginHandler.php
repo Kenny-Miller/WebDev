@@ -5,7 +5,7 @@
     
     $dao = new Dao();
     
-    $regex = "\w{1,20}";
+    $regex = "/\w{1,20}/";
 
     if(!preg_match($regex,$_POST['username'])){
         $_SESSION['auth'] = false;
