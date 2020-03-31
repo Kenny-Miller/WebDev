@@ -56,7 +56,6 @@
     
     
     if($email == 'none'){
-       echo "test";
         $dao->updateTask($tid, $text, $sid);
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$wid}&o=status");
         exit;

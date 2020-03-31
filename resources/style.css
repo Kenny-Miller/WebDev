@@ -198,11 +198,20 @@ body {
     }
 }
 
+.addTaskContainer{
+     box-shadow: 0px 1px 4px rgba(0, 0, 0, 50%);
+    background:white;
+}
+
+#addTask{
+    
+}
+
 #dashboard-sort{
     text-align: center;
     padding: 15px;
-    background:white;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 50%);
+    
+   
 }
 
 #dashboard-itemlist{

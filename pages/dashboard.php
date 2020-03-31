@@ -20,7 +20,6 @@
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspaces.php");
         exit;
     }
-
 ?>
 
 <html>
@@ -89,9 +88,11 @@
                 </select>
                 <input type="submit">
              </form>
+            <div class="addTaskContainer">
             <a id="addTask" href="addTask.php?wid=<?=$_GET['wid']?>">
                <p>Add Task</p>
             </a>
+            </div>
             <ol id="dashboard-itemlist">
                 <?php
                     $tasks;
