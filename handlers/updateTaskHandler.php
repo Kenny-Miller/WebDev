@@ -14,7 +14,7 @@
     }
     
     if(!is_numeric($_POST['wid']) || $_POST['wid'] <= 0){
-        $_SESSION['message'] = "Workspace does not exist";
+        $_SESSION['message'] = "Workspace does test not exist";
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspaces.php");
         exit;
     }
