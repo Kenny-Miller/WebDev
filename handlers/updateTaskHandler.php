@@ -27,7 +27,7 @@
 
     if(!is_numeric($_POST['tid']) || $_POST['tid'] <= 0 || !$dao->validateTask($_POST['tid'],$_POST['wid'])){
         $_SESSION['message'] = "Task does not exist";
-        header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?={$_POST['wid']}");
+        header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$_POST['wid']}o=status");
        exit;
     }
     $tid = $_POST['tid'];
@@ -36,7 +36,7 @@
     
     if(!is_numeric($sid) || ($sid != 1 && $sid != 2 && $sid != 3)){
         $_SESSION['message'] = "Error occured trying to update task. Please try again.";
-        header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$wid}");
+        header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$wid}o=status");
         exit;
     }
     
@@ -58,12 +58,12 @@
     if($email == 'none'){
        
          $dao->updateTask($tid, $text, $sid);
-        header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$wid}");
+        header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$wid}o=status");
         exit;
     } else{
        
         $dao->updateTaskU($tid, $user['user_id'], $text, $sid);
-        header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$wid}");
+        header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$wid}&o=status");
         exit;
     } 
 ?>
