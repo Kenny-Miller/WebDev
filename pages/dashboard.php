@@ -50,11 +50,7 @@
                 <p class="sidebar-item-text">Home</p>
                 <img class="sidebar-item-arrow" src="/resources/images/arrow.png" >
             </a>
-            <a class="sidebar-item-container">
-                <img class="sidebar-item-img" src="/resources/images/users.png">
-                <p class="sidebar-item-text">Users</p>
-                <img class="sidebar-item-arrow" src="/resources/images/arrow.png">
-            </a>
+            
             <a id="changeWorkplace" class="sidebar-item-container" href="workspaces.php">
                 <p class="sidebar-item-text">Change Workplaces</p>
             </a>
