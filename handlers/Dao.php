@@ -343,18 +343,17 @@ class Dao{
         }
     }
     
-    public function updateTask($tid, $wid, $text, $sid){
+    public function updateTask($tid, $text, $sid){
        $conn = $this->getConnection();
         if(is_null($conn)) {
             return;
         }
         try{
             $query = "update tasks
-                      set user_id = null, task_name :text, workspace_id = :wid, status_id = :sid
+                      set user_id = null, task_name :text, status_id = :sid
                       where task_id = :tid";
             $execute = $conn->prepare($query);
             $execute->bindParam(":tid", $tid);
-            $execute->bindParam(":wid", $wid);
             $execute->bindParam(":text", $text);
             $execute->bindParam(":sid", $sid);
             $execute->execute();
@@ -365,18 +364,17 @@ class Dao{
         }
     }
     
-    public function updateTaskU($tid, $wid, $uid, $text, $sid){
+    public function updateTaskU($tid, $uid, $text, $sid){
         $conn = $this->getConnection();
         if(is_null($conn)) {
             return;
         }
         try{
             $query = "update tasks
-                      set user_id = :uid, task_name :text, workspace_id = :wid, status_id = :sid
+                      set user_id = :uid, task_name :text, status_id = :sid
                       where task_id = :tid";
             $execute = $conn->prepare($query);
             $execute->bindParam(":tid", $tid);
-            $execute->bindParam(":wid", $wid);
             $execute->bindParam(":uid", $uid);
             $execute->bindParam(":text", $text);
             $execute->bindParam(":sid", $sid);
