@@ -89,12 +89,12 @@ error_reporting(E_ALL);
                 <div class="task-submit">
                     <input id="task-submit"  type="submit" value="Update Task">
                 </div>
-            </form>
-            <div class="cancelTaskContainer">
+                <div class="cancelTaskContainer">
                 <a id="cancelButton" href="dashboard.php?wid=<?=$_GET['wid']?>&o=status">
                     Cancel
                 </a>
             </div>
+            </form>
         </div>
         <div class="footer">@Copyright 2020 Kenny Miller</div>
     </body>
