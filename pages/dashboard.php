@@ -64,7 +64,7 @@
         </div>
         
         <div class="content">
-            <div "content-heading">
+            <div class="content-heading">
             <form id="dashboard-sort" action="/pages/dashboard.php" method="get">
                 <h1>Home</h1>
                 <label for="dashboard-sortby">Sort By</label>
@@ -89,7 +89,7 @@
                 </select>
                 <input type="submit">
              </form>
-            <div class="addTaskContainerr">
+            <div class="addTaskContainer">
                 <a id="addTask" href="addTask.php?wid=<?=$_GET['wid']?>">
                     Add Task
                 </a>

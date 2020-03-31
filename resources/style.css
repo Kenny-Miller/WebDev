@@ -209,7 +209,12 @@ body {
 }
 
 #addTask{
-    
+    border-radius:15px;
+    border:none;
+    padding: 10px 20px;
+    margin-bottom:25px;
+    background: #42b0f5;
+    color: #ffffff;
 }
 
 #dashboard-sort{
