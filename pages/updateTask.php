@@ -31,7 +31,7 @@ error_reporting(E_ALL);
         exit;
     }
     //Get current tid values: user id status id, and task text;
-    $task = $dao->getTask($_GET['tid']);
+    
     
 
 ?>
@@ -53,12 +53,10 @@ error_reporting(E_ALL);
                     <select id="task-user" name="user">
                         <option value="none">Unnassigned</option>
                         <?php
+                            $task = $dao->getTask($_GET['tid']);
                             $users = $dao->getUsers($_GET['wid']);
                             foreach($users as $user){
-                                if($_task['email'] == $user['email']){
-                                    echo $_task['email'];
-                                   echo "is equal to";
-                                    echo $user['email'];   
+                                if($_task['email'] == $user['email']){ 
                                     echo "<option selected=\"selected\" name=\"user\" value=\"{$user['email']}\">{$user['first_name']} {$user['last_name']}</option>";
                                 } else{
                                     echo "<option name=\"user\" value=\"{$user['email']}\">{$user['first_name']} {$user['last_name']}</option>";
@@ -71,6 +69,7 @@ error_reporting(E_ALL);
                     <label class="task-label" for="task-status">Select a Status</label>
                     <select id="task-status" name="status">
                         <?php
+                            $task = $dao->getTask($_GET['tid']);
                             $statuses = $dao->getStatuses();
                             foreach($statuses as $status){
                                 if($_task['status_id'] == $status['status_id']){
