@@ -25,7 +25,7 @@
         exit;
     }
 
-    if(!is_numeric($_POST['tid']) || $_POST['tid'] <= 0 || !$doa->validateTask($_POST['tid'],$_POST['wid'])){
+    if(!is_numeric($_POST['tid']) || $_POST['tid'] <= 0 || !$dao->validateTask($_POST['tid'],$_POST['wid'])){
         $_SESSION['message'] = "Task does not exist";
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?={$_POST['wid']}");
         exit;
