@@ -33,8 +33,8 @@
     
     
     if(!is_numeric($sid) || ($sid != 1 && $sid != 2 && $sid != 3)){
-        $_SESSION['message'] = "Error occured trying to add task. Please try again.";
-        header("Location: https://frozen-ravine-42740.herokuapp.com/pages/workspaces.php?wid={$wid}");
+        $_SESSION['message'] = "Error occured trying to update task. Please try again.";
+        header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$wid}");
         exit;
     }
     
