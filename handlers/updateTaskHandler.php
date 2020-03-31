@@ -56,12 +56,14 @@
         //echo "made it noen";
         echo $dao->updateTask($tid, $text, $sid);
         //header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$wid}");
-        //exit;
+        exit;
     } else{
        // echo "made it";
         $num = $uid['user_id'];
+        echo "test";
         echo $dao->updateTaskU($tid, $num, $text, $sid);
         //header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$wid}");
-        //exit;
+        echo "test";
+        exit;
     } 
 ?>
