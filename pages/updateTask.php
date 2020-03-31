@@ -26,12 +26,15 @@ error_reporting(E_ALL);
     }
 
     //check tid
-    if(!dao->taskExists($_GET['wid'],$_GET['tid'])){
+    if(!$dao->taskExists($_GET['wid'],$_GET['tid'])){
         header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$_GET['wid']}");
         exit;
     }
     //Get current tid values: user id status id, and task text;
-   
+    $task = $dao->getTask($_GET['tid']);
+    echo $task['email'];
+    echo $task['status_id'];
+    echo $task['task_name'];
 
 ?>
 <html>
