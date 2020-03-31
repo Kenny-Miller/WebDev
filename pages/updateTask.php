@@ -47,7 +47,7 @@ error_reporting(E_ALL);
         </div>
         <div class="container">
             <form id="updateTaskForm" class="task-form" method="POST" action="/handlers/updateTaskHandler.php">
-                <h1 class="heading task-header">Add Task</h1>
+                <h1 class="heading task-header">Update Task</h1>
                 <div class="task-input-container">
                     <label class="task-label" for="task-user">Select a User</label>
                     <select id="task-user" name="user">
@@ -87,7 +87,7 @@ error_reporting(E_ALL);
                 <input type="hidden" name="wid" value="<?=$_GET['wid']?>">
                 <input type="hidden" name="tid" value="<?=$_GET['tid']?>">
                 <div class="task-submit">
-                    <input id="task-submit"  type="submit" value="AddTask">
+                    <input id="task-submit"  type="submit" value="Update Task">
                 </div>
             </form>
         </div>

@@ -25,10 +25,12 @@
         exit;
     }
 
+    if(!is_numeric($_POST['tid']) || $_POST['tid'] <= 0 || !doa->validateTask($_POST['tid'],$_POST['wid'])){
+        $_SESSION['message'] = "Task does not exist";
+        header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?={$_POST['wid']}");
+        exit;
+    }
     
-    
-    $wid = $_POST['wid'];
-    $sid = $_POST['status'];
     
     if(!is_numeric($sid) || ($sid != 1 && $sid != 2 && $sid != 3)){
         $_SESSION['message'] = "Error occured trying to add task. Please try again.";
@@ -46,15 +48,17 @@
     }
     
     $text = filter_var($_POST['text'], FILTER_SANITIZE_SPECIAL_CHARS);
-    
+    $tid = $_POST['tid'];
+    $wid = $_POST['wid'];
+    $sid = $_POST['status'];
+
     if($email == 'none'){
-        //$dao->addTask($wid,$sid,$text);
-       // header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$wid}");
-       // exit;
+        $dao->updateTask($tid,$wid,$text,$sid);
+        header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$wid}");
+        exit;
     } else{
-       // $num = $uid['user_id'];
-        //$dao->addTask2($wid,$sid,$text, $num);
-       // header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$wid}");
-      //  exit;
-    } exit; 
+        $num = $uid['user_id'];
+        $dao->updateTaskU($tid,$wid,$uid,$text,$sid);
+        header("Location: https://frozen-ravine-42740.herokuapp.com/pages/dashboard.php?wid={$wid}");
+        exit;
 ?>

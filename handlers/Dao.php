@@ -325,5 +325,68 @@ class Dao{
         }
     }
     
+    public function validateTask($tid,$wid){
+        $conn = $this->getConnection();
+        if(is_null($conn)) {
+            return;
+        }
+        try{
+            $query = "select * from tasks where task_id = :tid AND workspace_id = :wid";
+            $execute = $conn->prepare($query);
+            $execute->bindParam(":tid", $tid);
+            $execute->bindParam(":wid", $wid);
+            $execute->execute();
+            $result = $execute->fetch(PDO::FETCH_ASSOC);
+            return $result;
+        }  catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+    
+    public function updateTask($tid, $wid, $text, $sid){
+       $conn = $this->getConnection();
+        if(is_null($conn)) {
+            return;
+        }
+        try{
+            $query = "update tasks
+                      set user_id = null, task_name :text, status_id = :sid
+                      where task_id = :tid";
+            $execute = $conn->prepare($query);
+            $execute->bindParam(":tid", $tid);
+            $execute->bindParam(":wid", $wid);
+            $execute->bindParam(":text", $text);
+            $execute->bindParam(":sid", $sid);
+            $execute->execute();
+            $result = $execute->fetch(PDO::FETCH_ASSOC);
+            return $result;
+        }  catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+    
+    public function updateTaskU($tid, $wid, $uid, $text, $sid){
+        $conn = $this->getConnection();
+        if(is_null($conn)) {
+            return;
+        }
+        try{
+            $query = "update tasks
+                      set user_id = :uid, task_name :text, status_id = :sid
+                      where task_id = :tid";
+            $execute = $conn->prepare($query);
+            $execute->bindParam(":tid", $tid);
+            $execute->bindParam(":wid", $wid);
+            $execute->bindParam(":uid", $uid);
+            $execute->bindParam(":text", $text);
+            $execute->bindParam(":sid", $sid);
+            $execute->execute();
+            $result = $execute->fetch(PDO::FETCH_ASSOC);
+            return $result;
+        }  catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+    
 }
 ?>
